@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar inmueble | Tu Inmueble Suroeste</title>
+    <meta name="description" content="Publica tu casa, apartamento, finca, lote o local.">
+    <link rel="icon" href="assets/img/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="" data-base="">
+
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="index.html">
+                <img src="assets/img/logo.jpg" alt="" width="44" height="44">
+                <span>Tu Inmueble <small>Suroeste</small></span>
+            </a>
+            <nav class="main-nav" id="menu-principal" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Inmuebles</a></li>
+                    <li><a href="favoritos.html">Favoritos</a></li>
+                    <li><a href="mi-cuenta.html">Mi cuenta</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a class="icon-link" href="favoritos.html" aria-label="Favoritos">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.1 0 3.6 1.2 5.2 3 1.6-1.8 3.1-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z"/></svg>
+                    <span class="fav-count" hidden>0</span>
+                </a>
+                <a class="icon-link" href="login.html" aria-label="Ingresar o crear cuenta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></a>
+                <a class="btn btn-primary" href="publicar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Publicar inmueble</a>
+                <button type="button" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+            </div>
+        </div>
+    </header>
+
+    <main id="contenido">
+        <section class="page-title">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Ruta de navegación">
+                    <ol>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li aria-current="page">Publicar inmueble</li>
+                    </ol>
+                </nav>
+                <h1>Publicar inmueble</h1>
+                <p class="text-secondary">Completa la información; nuestro equipo la revisará antes de publicarla en el catálogo.</p>
+                <ol class="steps" aria-label="Pasos de la publicación">
+                    <li>Información general</li>
+                    <li>Ubicación</li>
+                    <li>Características</li>
+                    <li>Fotografías</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="container" style="padding-bottom:64px">
+            <form data-validate>
+                <div class="alert alert-success" role="status" tabindex="-1" hidden>Tu inmueble fue enviado a revisión. Te avisaremos cuando esté publicado.</div>
+                <div class="alert alert-error" role="alert" hidden>Faltan datos obligatorios. Revisa los campos marcados.</div>
+
+                <fieldset>
+                    <legend>1. Información general</legend>
+                    <div class="form-grid">
+                        <div class="form-field full">
+                            <label for="p-titulo">Título del anuncio</label>
+                            <input type="text" id="p-titulo" name="titulo" maxlength="150" placeholder="Ej. Casa campestre con vista a la montaña" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="p-tipo">Tipo de inmueble</label>
+                            <select id="p-tipo" name="tipo" required>
+                                <option value="">Selecciona</option>
+                                <option value="casa">Casa</option>
+                            <option value="apartamento">Apartamento</option>
+                            <option value="finca">Finca</option>
+                            <option value="lote">Lote</option>
+                            <option value="local">Local</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <label for="p-operacion">Operación</label>
+                            <select id="p-operacion" name="operacion" required>
+                                <option value="">Selecciona</option>
+                                <option value="venta">Venta</option>
+                                <option value="arriendo">Arriendo</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <label for="p-precio">Precio (COP)</label>
+                            <input type="number" id="p-precio" name="precio" min="1" placeholder="Ej. 350000000" required>
+                            <p class="field-hint">En arriendo, escribe el valor mensual.</p>
+                        </div>
+                        <div class="form-field full">
+                            <label for="p-descripcion">Descripción</label>
+                            <textarea id="p-descripcion" name="descripcion" minlength="30" placeholder="Describe el inmueble, su estado y lo que lo hace especial" required></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>2. Ubicación</legend>
+                    <div class="form-grid">
+                        <div class="form-field">
+                            <label for="p-municipio">Municipio</label>
+                            <select id="p-municipio" name="municipio" required>
+                                <option value="">Selecciona</option>
+                                <option value="Andes">Andes</option>
+                            <option value="Betania">Betania</option>
+                            <option value="Ciudad Bolívar">Ciudad Bolívar</option>
+                            <option value="Hispania">Hispania</option>
+                            <option value="Jardín">Jardín</option>
+                            <option value="Jericó">Jericó</option>
+                            <option value="Támesis">Támesis</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <label for="p-direccion">Dirección o vereda</label>
+                            <input type="text" id="p-direccion" name="direccion" placeholder="Ej. Calle 50 # 49-21" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>3. Características</legend>
+                    <div class="form-grid">
+                        <div class="form-field">
+                            <label for="p-habitaciones">Habitaciones</label>
+                            <input type="number" id="p-habitaciones" name="habitaciones" min="0" value="0">
+                        </div>
+                        <div class="form-field">
+                            <label for="p-banos">Baños</label>
+                            <input type="number" id="p-banos" name="banos" min="0" value="0">
+                        </div>
+                        <div class="form-field">
+                            <label for="p-area">Área (m²)</label>
+                            <input type="number" id="p-area" name="area" min="1" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="p-parqueadero">Parqueadero</label>
+                            <select id="p-parqueadero" name="parqueadero">
+                                <option value="no">No</option>
+                                <option value="1">1 vehículo</option>
+                                <option value="2">2 o más vehículos</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>4. Fotografías</legend>
+                    <div class="form-field">
+                        <label for="p-fotos">Sube entre 3 y 10 fotografías</label>
+                        <input type="file" id="p-fotos" name="fotos" accept="image/*" multiple required>
+                        <p class="field-hint">Formatos JPG o PNG, máximo 5 MB por imagen.</p>
+                    </div>
+                    <label class="checkbox"><input type="checkbox" name="confirmacion" required> Confirmo que soy propietario o estoy autorizado para publicar este inmueble.</label>
+                </fieldset>
+
+                <div class="form-actions">
+                    <a class="btn btn-outline" href="mi-cuenta.html">Cancelar</a>
+                    <button type="submit" class="btn btn-primary">Publicar inmueble</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <section>
+                    <a class="brand" href="index.html">
+                <img src="assets/img/logo.jpg" alt="" width="44" height="44">
+                <span>Tu Inmueble <small>Suroeste</small></span>
+            </a>
+                    <p>Plataforma inmobiliaria para comprar, vender y arrendar casas, apartamentos, fincas, lotes y locales en el Suroeste Antioqueño.</p>
+                </section>
+                <nav aria-label="Navegación del pie de página">
+                    <h2>Navegación</h2>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="catalogo.html">Inmuebles</a></li>
+                        <li><a href="favoritos.html">Favoritos</a></li>
+                        <li><a href="publicar.html">Publicar inmueble</a></li>
+                    </ul>
+                </nav>
+                <section>
+                    <h2>Municipios</h2>
+                    <ul>
+                        <li><a href="catalogo.html?municipio=Andes">Andes</a></li>
+                        <li><a href="catalogo.html?municipio=Jard%C3%ADn">Jardín</a></li>
+                        <li><a href="catalogo.html?municipio=Jeric%C3%B3">Jericó</a></li>
+                        <li><a href="catalogo.html?municipio=Ciudad%20Bol%C3%ADvar">Ciudad Bolívar</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Contacto</h2>
+                    <ul>
+                        <li>Andes, Antioquia</li>
+                        <li><a href="mailto:contacto@tuinmueblesuroeste.co">contacto@tuinmueblesuroeste.co</a></li>
+                        <li><a href="tel:+576048410000">(604) 841 0000</a></li>
+                    </ul>
+                </section>
+            </div>
+            <p class="footer-bottom">© <span data-year>2026</span> Tu Inmueble Suroeste · Proyecto formativo SENA – Análisis y Desarrollo de Software.</p>
+        </div>
+    </footer>
+
+    <nav class="bottom-nav" aria-label="Navegación móvil">
+        <ul>
+            <li><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>Inicio</a></li>
+            <li><a href="catalogo.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Buscar</a></li>
+            <li><a href="favoritos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.1 0 3.6 1.2 5.2 3 1.6-1.8 3.1-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z"/></svg>Favoritos</a></li>
+            <li><a href="mi-cuenta.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Mi cuenta</a></li>
+        </ul>
+    </nav>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

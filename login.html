@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar | Tu Inmueble Suroeste</title>
+    <meta name="description" content="Inicia sesión en Tu Inmueble Suroeste.">
+    <link rel="icon" href="assets/img/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="" data-base="">
+
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="index.html">
+                <img src="assets/img/logo.jpg" alt="" width="44" height="44">
+                <span>Tu Inmueble <small>Suroeste</small></span>
+            </a>
+            <nav class="main-nav" id="menu-principal" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Inmuebles</a></li>
+                    <li><a href="favoritos.html">Favoritos</a></li>
+                    <li><a href="mi-cuenta.html" aria-current="page">Mi cuenta</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a class="icon-link" href="favoritos.html" aria-label="Favoritos">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.1 0 3.6 1.2 5.2 3 1.6-1.8 3.1-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z"/></svg>
+                    <span class="fav-count" hidden>0</span>
+                </a>
+                <a class="icon-link" href="login.html" aria-label="Ingresar o crear cuenta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></a>
+                <a class="btn btn-primary" href="publicar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Publicar inmueble</a>
+                <button type="button" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+            </div>
+        </div>
+    </header>
+
+    <main id="contenido">
+        <section class="auth-page">
+            <div class="auth-card">
+                <span class="eyebrow">Bienvenido de nuevo</span>
+                <h1>Ingresar</h1>
+                <p class="text-secondary">Accede para guardar favoritos y hacer seguimiento a tus solicitudes, contratos y pagos.</p>
+                <form data-validate data-redirect="mi-cuenta.html">
+                    <div class="alert alert-error" role="alert" hidden>Revisa tu correo y contraseña.</div>
+                    <div class="form-field">
+                        <label for="l-correo">Correo electrónico</label>
+                        <input type="email" id="l-correo" name="correo" autocomplete="email" placeholder="nombre@correo.com" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="l-contrasena">Contraseña</label>
+                        <input type="password" id="l-contrasena" name="contrasena" autocomplete="current-password" minlength="8" required>
+                    </div>
+                    <div class="auth-links">
+                        <label class="checkbox"><input type="checkbox" name="recordar"> Recordarme</label>
+                        <a href="recuperar.html">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
+                </form>
+                <p class="auth-footer">¿No tienes cuenta? <a href="registro.html">Crear cuenta</a></p>
+                <p class="auth-footer"><a href="admin/dashboard.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg> Acceso administradores</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <section>
+                    <a class="brand" href="index.html">
+                <img src="assets/img/logo.jpg" alt="" width="44" height="44">
+                <span>Tu Inmueble <small>Suroeste</small></span>
+            </a>
+                    <p>Plataforma inmobiliaria para comprar, vender y arrendar casas, apartamentos, fincas, lotes y locales en el Suroeste Antioqueño.</p>
+                </section>
+                <nav aria-label="Navegación del pie de página">
+                    <h2>Navegación</h2>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="catalogo.html">Inmuebles</a></li>
+                        <li><a href="favoritos.html">Favoritos</a></li>
+                        <li><a href="publicar.html">Publicar inmueble</a></li>
+                    </ul>
+                </nav>
+                <section>
+                    <h2>Municipios</h2>
+                    <ul>
+                        <li><a href="catalogo.html?municipio=Andes">Andes</a></li>
+                        <li><a href="catalogo.html?municipio=Jard%C3%ADn">Jardín</a></li>
+                        <li><a href="catalogo.html?municipio=Jeric%C3%B3">Jericó</a></li>
+                        <li><a href="catalogo.html?municipio=Ciudad%20Bol%C3%ADvar">Ciudad Bolívar</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Contacto</h2>
+                    <ul>
+                        <li>Andes, Antioquia</li>
+                        <li><a href="mailto:contacto@tuinmueblesuroeste.co">contacto@tuinmueblesuroeste.co</a></li>
+                        <li><a href="tel:+576048410000">(604) 841 0000</a></li>
+                    </ul>
+                </section>
+            </div>
+            <p class="footer-bottom">© <span data-year>2026</span> Tu Inmueble Suroeste · Proyecto formativo SENA – Análisis y Desarrollo de Software.</p>
+        </div>
+    </footer>
+
+    <nav class="bottom-nav" aria-label="Navegación móvil">
+        <ul>
+            <li><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>Inicio</a></li>
+            <li><a href="catalogo.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Buscar</a></li>
+            <li><a href="favoritos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.1 0 3.6 1.2 5.2 3 1.6-1.8 3.1-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z"/></svg>Favoritos</a></li>
+            <li><a href="mi-cuenta.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Mi cuenta</a></li>
+        </ul>
+    </nav>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
