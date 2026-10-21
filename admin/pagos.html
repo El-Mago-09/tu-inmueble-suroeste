@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagos | Administración – Tu Inmueble Suroeste</title>
-    <meta name="description" content="Área administrativa: Pagos.">
+    <title>Gestión de pagos | Administración – Tu Inmueble Suroeste</title>
+    <meta name="description" content="Registra y verifica pagos de cánones, depósitos y compraventas">
     <link rel="icon" href="../assets/img/logo.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,80 +12,97 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/responsive.css">
 </head>
-<body data-page="" data-base="../">
+<body data-page="admin" data-base="../">
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
-    <header class="site-header">
-        <div class="container" style="max-width:none">
-            <a class="brand" href="../index.html">
-                <img src="../assets/img/logo.jpg" alt="" width="44" height="44">
-                <span>Tu Inmueble <small>Suroeste</small></span>
-            </a>
-            <div class="header-actions">
-                <span class="badge badge-venta">Administrador</span>
-                <a class="btn btn-outline btn-sm" href="../index.html">Ver sitio público</a>
-            </div>
-        </div>
-    </header>
-
-    <div class="layout-sidebar">
-        <aside class="sidebar" aria-label="Menú de administración">
-            <div class="sidebar-user">
-                <span class="avatar" aria-hidden="true">AD</span>
-                <p>Administrador<small>admin@tuinmueblesuroeste.co</small></p>
-            </div>
-            <p class="sidebar-section">Gestión</p>
-            <nav aria-label="Módulos administrativos">
-                <ul>
-                    <li><a href="dashboard.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg> Panel</a></li>
-                    <li><a href="usuarios.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-3.5 3-5 7-5s7 1.5 7 5"/><path d="M16 4a3.5 3.5 0 0 1 0 7M22 20c0-3-2-4.5-4.5-5"/></svg> Usuarios</a></li>
-                    <li><a href="inmuebles.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V5l8-3v19M12 9h8v12"/><path d="M8 8h.01M8 12h.01M8 16h.01M16 13h.01M16 17h.01"/></svg> Inmuebles</a></li>
-                    <li><a href="solicitudes.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M4 13h5l1 3h4l1-3h5"/></svg> Solicitudes</a></li>
-                    <li><a href="contratos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6v18h12V7z"/><path d="M14 3v4h4M9 13h6M9 17h6"/></svg> Contratos</a></li>
-                    <li><a href="pagos.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg> Pagos</a></li>
-                    <li><a href="../login.html" data-confirm="¿Deseas cerrar la sesión de administrador?"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5V3h4M16 17l5-5-5-5M21 12H9"/></svg> Cerrar sesión</a></li>
+    <div class="admin">
+        <aside class="admin-side" aria-label="Menú de administración">
+            <a class="logo-box" href="dashboard.html"><img src="../assets/img/logo.jpg" alt="Tu Inmueble Suroeste - Panel" width="124" height="60"></a>
+            <span class="role-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1Z"/><path d="m9 12 2 2 4-4"/></svg>Panel administrativo</span>
+            <nav class="admin-nav" aria-label="Módulos administrativos">
+                <ul class="admin-menu">
+                    <li><a href="dashboard.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>Dashboard</a></li>
+                    <li><a href="usuarios.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>Usuarios</a></li>
+                    <li><a href="inmuebles.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></svg>Inmuebles</a></li>
+                    <li><a href="solicitudes.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11Z"/></svg>Solicitudes</a></li>
+                    <li><a href="contratos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M10 9H8M16 13H8M16 17H8"/></svg>Contratos</a></li>
+                    <li><a href="pagos.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>Pagos</a></li>
                 </ul>
             </nav>
+            <div class="admin-bottom">
+                <a class="site-link" href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Ver sitio público</a>
+                <a class="logout" href="../login.html" data-confirm="¿Deseas cerrar la sesión de administrador?" data-ok-text="Cerrar sesión"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>Cerrar sesión</a>
+            </div>
         </aside>
 
-        <main class="content" id="contenido">
-            <div class="content-head">
-                <h1>Gestión de pagos</h1>
-            </div>
-            <section class="stats" aria-label="Resumen de pagos">
-                <article class="stat"><h2>Recaudado en octubre</h2><p>$ 3,5 M</p></article>
-                <article class="stat"><h2>Pendientes</h2><p>2</p></article>
-                <article class="stat"><h2>Rechazados</h2><p>1</p></article>
-                <article class="stat"><h2>Contratos activos</h2><p>2</p></article>
+        <main class="admin-main" id="contenido">
+            <header class="admin-top">
+                <div class="heading">
+                    <p class="crumb">Administración / Gestión de pagos</p>
+                    <h1>Gestión de pagos</h1>
+                    <p class="sub">Registra y verifica pagos de cánones, depósitos y compraventas</p>
+                </div>
+                <div class="admin-top-actions">
+                    <div class="admin-user">
+                        <span class="avatar" aria-hidden="true">AD</span>
+                        <div><strong>Administrador</strong><span>admin@tuinmueblesuroeste.co</span></div>
+                    </div>
+                    <button type="button" class="btn btn-primary" data-toast="Esta acción se habilitará cuando el sistema se conecte a la base de datos."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5v14"/></svg>Registrar pago</button>
+                </div>
+            </header>
+            <section class="kpis three" aria-label="Resumen de pagos">
+                <article class="kpi">
+                    <div class="kpi-top"><h2>Recaudado en octubre (COP)</h2><span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span></div>
+                    <strong>$74.200.000</strong>
+                    <small></small>
+                </article>
+                <article class="kpi">
+                    <div class="kpi-top"><h2>Pendiente por cobrar (COP)</h2><span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></span></div>
+                    <strong>$9.000.000</strong>
+                    <small></small>
+                </article>
+                <article class="kpi">
+                    <div class="kpi-top"><h2>Pagos pendientes</h2><span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11Z"/></svg></span></div>
+                    <strong>5</strong>
+                    <small></small>
+                </article>
             </section>
-                <form class="toolbar" role="search" onsubmit="return false">
-                    <div class="form-field">
-                        <label for="buscar-tabla-pagos" class="visually-hidden">Buscar</label>
-                        <input type="search" id="buscar-tabla-pagos" placeholder="Buscar por referencia o cliente" data-table-filter="tabla-pagos">
-                    </div>
-                    <div class="form-field">
-                        <label for="estado-tabla-pagos" class="visually-hidden">Filtrar por estado</label>
-                        <select id="estado-tabla-pagos" data-table-state="tabla-pagos">
-                            <option value="">Todos los estados</option>
-                            <option value="pendiente">Pendiente</option>
-                            <option value="pagado">Pagado</option>
-                            <option value="rechazado">Rechazado</option>
-                        </select>
-                    </div>
-                </form>
+            <form class="tools" data-table="tabla-pagos" role="search">
+                <div class="field grow">
+                    <label for="buscar-tabla-pagos">Buscar</label>
+                    <input class="control" type="search" id="buscar-tabla-pagos" placeholder="Buscar por concepto o cliente" data-filter-text>
+                </div>
+                <div class="field">
+                    <label for="tabla-pagos-4">Estado</label>
+                    <select class="control" id="tabla-pagos-4" data-filter-col="4"><option value="">Todos</option><option value="Pagado">Pagado</option><option value="Pendiente">Pendiente</option></select>
+                </div>
+                <div class="field">
+                    <label for="tabla-pagos-2">Mes</label>
+                    <select class="control" id="tabla-pagos-2" data-filter-col="2"><option value="">Todos los meses</option><option value="/08/2026">Agosto 2026</option><option value="/10/2026">Octubre 2026</option><option value="/11/2026">Noviembre 2026</option></select>
+                </div>
+                <button type="submit" class="btn btn-secondary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 3H2l8 9.46V19l4 2v-8.54Z"/></svg>Filtrar</button>
+            </form>
             <div class="table-wrap">
                 <table id="tabla-pagos">
                     <caption class="visually-hidden">Pagos registrados</caption>
-                    <thead>
-                        <tr><th scope="col">Referencia</th><th scope="col">Contrato</th><th scope="col">Cliente</th><th scope="col">Fecha</th><th scope="col">Método</th><th scope="col">Valor</th><th scope="col">Estado</th><th scope="col">Acciones</th></tr>
-                    </thead>
+                    <thead><tr><th scope="col">CONCEPTO</th><th scope="col">CLIENTE</th><th scope="col">FECHA</th><th scope="col">VALOR COP</th><th scope="col">ESTADO</th><th scope="col">ACCIONES</th></tr></thead>
                     <tbody>
-                        <tr><td>PAG-104</td><td>CON-006</td><td><strong>Laura Restrepo</strong></td><td>05/11/2026</td><td>PSE</td><td>$ 1.900.000 COP</td><td><span class="badge badge-warn">Pendiente</span></td><td><div class="row-actions"><button type="button" class="btn btn-secondary btn-sm" data-confirm="¿Registrar el pago PAG-104 como recibido?" data-new-state="Pagado" data-new-class="badge-ok" data-done="Pago registrado">Registrar pago</button></div></td></tr>
-                        <tr><td>PAG-103</td><td>CON-005</td><td><strong>Ometh Martinez</strong></td><td>05/11/2026</td><td>PSE</td><td>$ 1.600.000 COP</td><td><span class="badge badge-warn">Pendiente</span></td><td><div class="row-actions"><button type="button" class="btn btn-secondary btn-sm" data-confirm="¿Registrar el pago PAG-103 como recibido?" data-new-state="Pagado" data-new-class="badge-ok" data-done="Pago registrado">Registrar pago</button></div></td></tr>
-                        <tr><td>PAG-099</td><td>CON-006</td><td><strong>Laura Restrepo</strong></td><td>05/10/2026</td><td>Transferencia</td><td>$ 1.900.000 COP</td><td><span class="badge badge-ok">Pagado</span></td><td><div class="row-actions"><span class="text-secondary">Sin acciones</span></div></td></tr>
-                        <tr><td>PAG-097</td><td>CON-005</td><td><strong>Ometh Martinez</strong></td><td>05/10/2026</td><td>PSE</td><td>$ 1.600.000 COP</td><td><span class="badge badge-ok">Pagado</span></td><td><div class="row-actions"><span class="text-secondary">Sin acciones</span></div></td></tr>
-                        <tr><td>PAG-095</td><td>CON-003</td><td><strong>Marta Zapata</strong></td><td>05/09/2026</td><td>Tarjeta</td><td>$ 2.800.000 COP</td><td><span class="badge badge-danger">Rechazado</span></td><td><div class="row-actions"><span class="text-secondary">Sin acciones</span></div></td></tr>
+                        <tr><td class="strong">Canon arriendo · Octubre 2026 · C-0041</td><td>Ometh Martinez</td><td>05/10/2026</td><td>$1.800.000</td><td><span class="badge badge-success">Pagado</span></td><td><div class="row-actions"><button type="button" class="btn-sm" data-toast="Esta acción se habilitará cuando el sistema se conecte a la base de datos.">Ver soporte</button></div></td></tr>
+                        <tr><td class="strong">Canon arriendo · Noviembre 2026 · C-0041</td><td>Ometh Martinez</td><td>05/11/2026</td><td>$1.800.000</td><td><span class="badge badge-warning">Pendiente</span></td><td><div class="row-actions"><button type="button" class="btn-sm" data-confirm="¿Registrar el pago de $1.800.000 de Ometh Martinez como recibido?" data-ok-text="Registrar" data-new-state="Pagado" data-new-class="badge-success" data-done="Pago registrado">Registrar</button><button type="button" class="btn-sm" data-toast="Esta acción se habilitará cuando el sistema se conecte a la base de datos.">Recordar</button></div></td></tr>
+                        <tr><td class="strong">Canon arriendo · Octubre 2026 · C-0040</td><td>Carlos Restrepo</td><td>15/10/2026</td><td>$2.500.000</td><td><span class="badge badge-success">Pagado</span></td><td><div class="row-actions"><button type="button" class="btn-sm" data-toast="Esta acción se habilitará cuando el sistema se conecte a la base de datos.">Ver soporte</button></div></td></tr>
+                        <tr><td class="strong">Separación compraventa · C-0038</td><td>Ana Montoya</td><td>20/08/2026</td><td>$41.000.000</td><td><span class="badge badge-success">Pagado</span></td><td><div class="row-actions"><button type="button" class="btn-sm" data-toast="Esta acción se habilitará cuando el sistema se conecte a la base de datos.">Ver soporte</button></div></td></tr>
                     </tbody>
                 </table>
+                <p class="empty-state" data-empty-for="tabla-pagos" hidden style="border:none;border-radius:0">No hay registros que coincidan con la búsqueda.</p>
+                <div class="table-foot">
+                    <span>Mostrando 4 de 214 pagos</span>
+                    <div class="pager" aria-label="Paginación">
+                        <button type="button" disabled aria-label="Página anterior">‹</button>
+                        <button type="button" aria-current="page">1</button>
+                        <button type="button" data-toast="Esta acción se habilitará cuando el sistema se conecte a la base de datos.">2</button>
+                        <button type="button" data-toast="Esta acción se habilitará cuando el sistema se conecte a la base de datos.">3</button>
+                        <button type="button" data-toast="Esta acción se habilitará cuando el sistema se conecte a la base de datos." aria-label="Página siguiente">›</button>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
@@ -94,9 +111,9 @@
         <form method="dialog">
             <h2 id="modal-titulo">Confirmar acción</h2>
             <p data-modal-text></p>
-            <div class="form-actions">
+            <div class="modal-actions">
                 <button class="btn btn-outline" value="cancel">Cancelar</button>
-                <button class="btn btn-secondary" value="ok">Confirmar</button>
+                <button class="btn btn-secondary" value="ok" data-modal-ok>Confirmar</button>
             </div>
         </form>
     </dialog>
