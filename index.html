@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Inmueble Suroeste | Inmuebles en el Suroeste Antioqueño</title>
-    <meta name="description" content="Compra, vende y arrienda casas, apartamentos, fincas y lotes en el Suroeste Antioqueño.">
+    <title>Tu Inmueble Suroeste | Encuentra tu próximo hogar en el Suroeste</title>
+    <meta name="description" content="Casas, apartamentos y terrenos en venta y arriendo en el Suroeste Antioqueño.">
     <link rel="icon" href="assets/img/logo.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,188 +12,193 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body data-page="home" data-base="">
+<body data-page="home">
 
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <header class="site-header">
         <div class="container">
-            <a class="brand" href="index.html">
-                <img src="assets/img/logo.jpg" alt="" width="44" height="44">
-                <span>Tu Inmueble <small>Suroeste</small></span>
-            </a>
-            <nav class="main-nav" id="menu-principal" aria-label="Navegación principal">
+            <a class="logo" href="index.html"><img src="assets/img/logo.jpg" alt="Tu Inmueble Suroeste - Inicio" width="124" height="60"></a>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Inicio</a></li>
+                    <li><a href="catalogo.html">Inmuebles</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a class="btn btn-ghost" href="favoritos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>Favoritos</a>
+                <a class="btn btn-outline" href="login.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Ingresar</a>
+                <a class="btn btn-primary" href="publicar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/></svg>Publicar inmueble</a>
+            </div>
+            <button type="button" class="menu-btn" aria-controls="menu-movil" aria-expanded="false" aria-label="Abrir menú"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+            <nav class="mobile-menu" id="menu-movil" aria-label="Menú">
                 <ul>
                     <li><a href="index.html" aria-current="page">Inicio</a></li>
                     <li><a href="catalogo.html">Inmuebles</a></li>
                     <li><a href="favoritos.html">Favoritos</a></li>
                     <li><a href="mi-cuenta.html">Mi cuenta</a></li>
+                    <li><a href="mailto:contacto@tuinmueblesuroeste.co">Contacto</a></li>
                 </ul>
+                <div class="menu-actions">
+                    <a class="btn btn-outline" href="login.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Ingresar</a>
+                    <a class="btn btn-primary" href="publicar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/></svg>Publicar</a>
+                </div>
             </nav>
-            <div class="header-actions">
-                <a class="icon-link" href="favoritos.html" aria-label="Favoritos">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.1 0 3.6 1.2 5.2 3 1.6-1.8 3.1-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z"/></svg>
-                    <span class="fav-count" hidden>0</span>
-                </a>
-                <a class="icon-link" href="login.html" aria-label="Ingresar o crear cuenta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></a>
-                <a class="btn btn-primary" href="publicar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Publicar inmueble</a>
-                <button type="button" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
-            </div>
         </div>
     </header>
 
     <main id="contenido">
         <section class="hero" aria-labelledby="titulo-hero">
-            <div class="container">
-                <span class="eyebrow">Suroeste Antioqueño</span>
-                <h1 id="titulo-hero">Encuentra tu inmueble en el Suroeste Antioqueño</h1>
-                <p>Casas, apartamentos, fincas y lotes en venta y arriendo en Andes, Jardín, Jericó, Ciudad Bolívar y más municipios de la región.</p>
+            <div class="hero-inner">
+                <div class="hero-text">
+                    <span class="badge badge-available">+120 inmuebles disponibles</span>
+                    <h1 id="titulo-hero">Encuentra tu próximo hogar en el Suroeste</h1>
+                    <p>Casas, apartamentos y terrenos en las mejores ubicaciones.<span class="only-desktop"> Compra, vende o arrienda de forma segura y confiable.</span></p>
+                </div>
 
-                <form class="search-box" action="catalogo.html" method="get" role="search" aria-label="Buscar inmuebles">
-                    <div class="form-field">
-                        <label for="buscar-municipio">Municipio</label>
-                        <select id="buscar-municipio" name="municipio">
-                            <option value="">Todos los municipios</option>
-                            <option value="Andes">Andes</option>
-                            <option value="Betania">Betania</option>
-                            <option value="Ciudad Bolívar">Ciudad Bolívar</option>
-                            <option value="Hispania">Hispania</option>
-                            <option value="Jardín">Jardín</option>
-                            <option value="Jericó">Jericó</option>
-                            <option value="Támesis">Támesis</option>
-                        </select>
+                <form class="search-card" id="form-hero" action="catalogo.html" method="get" role="search" aria-label="Buscar inmuebles">
+                    <div class="segmented" role="radiogroup" aria-label="Operación">
+                        <label><input type="radio" name="operacion" value="venta" checked><span>Comprar</span></label>
+                        <label><input type="radio" name="operacion" value="arriendo"><span>Arrendar</span></label>
                     </div>
-                    <div class="form-field">
-                        <label for="buscar-tipo">Tipo de inmueble</label>
-                        <select id="buscar-tipo" name="tipo">
-                            <option value="">Todos los tipos</option>
-                            <option value="casa">Casa</option>
-                            <option value="apartamento">Apartamento</option>
-                            <option value="finca">Finca</option>
-                            <option value="lote">Lote</option>
-                            <option value="local">Local</option>
-                        </select>
+                    <div class="search-fields">
+                        <div class="field">
+                            <label for="buscar-q">Buscar</label>
+                            <input class="control" type="search" id="buscar-q" name="q" placeholder="Buscar por municipio, sector o palabra clave" data-ph-mobile="Municipio, sector o palabra clave">
+                        </div>
+                        <div class="field">
+                            <label for="buscar-tipo"><span class="only-desktop">Tipo de inmueble</span><span class="only-mobile">Tipo</span></label>
+                            <select class="control" id="buscar-tipo" name="tipo"><option value="">Todos</option><option value="casa">Casa</option><option value="apartamento">Apartamento</option><option value="terreno">Terreno</option><option value="local">Local</option></select>
+                        </div>
+                        <div class="field">
+                            <label for="buscar-municipio">Municipio</label>
+                            <select class="control" id="buscar-municipio" name="municipio"><option value="">Todos</option><option value="Jardín">Jardín</option><option value="Jericó">Jericó</option><option value="Andes">Andes</option><option value="Ciudad Bolívar">Ciudad Bolívar</option><option value="Hispania">Hispania</option><option value="Fredonia">Fredonia</option><option value="Támesis">Támesis</option></select>
+                        </div>
+                        <div class="field field-price">
+                            <label for="buscar-precio">Precio</label>
+                            <select class="control" id="buscar-precio" name="precio"><option value="">Cualquier precio</option><option value="0-300000000">Hasta $300.000.000</option><option value="300000000-600000000">$300 – $600 millones</option><option value="600000000-">Más de $600.000.000</option></select>
+                        </div>
+                        <button type="submit" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><span class="only-desktop">Buscar</span><span class="only-mobile">Buscar inmuebles</span></button>
                     </div>
-                    <div class="form-field">
-                        <label for="buscar-operacion">Operación</label>
-                        <select id="buscar-operacion" name="operacion">
-                            <option value="">Venta o arriendo</option>
-                            <option value="venta">Venta</option>
-                            <option value="arriendo">Arriendo</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg> Buscar</button>
                 </form>
-            </div>
-        </section>
 
-        <section class="section" aria-labelledby="titulo-destacados">
-            <div class="container">
-                <div class="section-head">
-                    <div>
-                        <span class="eyebrow">Selección</span>
-                        <h2 id="titulo-destacados">Inmuebles destacados</h2>
-                        <p>Propiedades verificadas y listas para visitar.</p>
-                    </div>
-                    <a class="btn btn-outline" href="catalogo.html">Ver todos los inmuebles</a>
-                </div>
-                <div class="grid-cards" id="destacados" aria-live="polite"></div>
-            </div>
-        </section>
-
-        <section class="section section-alt" aria-labelledby="titulo-municipios">
-            <div class="container">
-                <div class="section-head">
-                    <div>
-                        <span class="eyebrow">Explora la región</span>
-                        <h2 id="titulo-municipios">Busca por municipio</h2>
-                    </div>
-                </div>
-                <div class="grid-municipios">
-                    <a class="municipio" href="catalogo.html?municipio=Andes" style="--img:url('https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=500&q=60')"><p>Andes<span>Ver inmuebles</span></p></a>
-                    <a class="municipio" href="catalogo.html?municipio=Jard%C3%ADn" style="--img:url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=500&q=60')"><p>Jardín<span>Ver inmuebles</span></p></a>
-                    <a class="municipio" href="catalogo.html?municipio=Jeric%C3%B3" style="--img:url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=500&q=60')"><p>Jericó<span>Ver inmuebles</span></p></a>
-                    <a class="municipio" href="catalogo.html?municipio=Ciudad%20Bol%C3%ADvar" style="--img:url('https://images.unsplash.com/photo-1449844908441-8829872d2607?w=500&q=60')"><p>Ciudad Bolívar<span>Ver inmuebles</span></p></a>
-                    <a class="municipio" href="catalogo.html?municipio=T%C3%A1mesis" style="--img:url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=500&q=60')"><p>Támesis<span>Ver inmuebles</span></p></a>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="catalogo.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></svg>Ver inmuebles</a>
+                    <a class="btn btn-outline" href="publicar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/></svg>Publicar inmueble</a>
                 </div>
             </div>
         </section>
 
-        <section class="section" aria-labelledby="titulo-beneficios">
+        <nav class="categories only-mobile" aria-label="Categorías">
+            <a href="catalogo.html?tipo=casa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></svg>Casas</a>
+            <a href="catalogo.html?tipo=apartamento"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></svg>Aptos</a>
+            <a href="catalogo.html?tipo=terreno"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/><circle cx="17" cy="5" r="1.5"/></svg>Terrenos</a>
+            <a href="catalogo.html?tipo=local"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4M2 7h20M22 7v3a2 2 0 0 1-2 2 2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7"/></svg>Locales</a>
+        </nav>
+
+        <section class="section section-featured" aria-labelledby="titulo-destacados">
             <div class="container">
                 <div class="section-head">
-                    <div>
-                        <span class="eyebrow">Por qué elegirnos</span>
-                        <h2 id="titulo-beneficios">Un proceso claro de principio a fin</h2>
+                    <div class="heading">
+                        <span class="eyebrow">Destacados</span>
+                        <h2 class="title-32" id="titulo-destacados">Inmuebles destacados</h2>
+                        <p>Selección de propiedades en venta y arriendo en el Suroeste Antioqueño.</p>
                     </div>
+                    <a class="btn btn-outline" href="catalogo.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Ver todos los inmuebles</a>
+                    <a class="link-gold only-mobile" href="catalogo.html">Ver todos →</a>
                 </div>
-                <div class="grid-3">
-                    <article class="feature-box">
-                        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
-                        <h3>Busca y compara</h3>
-                        <p>Filtra por municipio, precio, tipo y habitaciones, y guarda tus favoritos.</p>
+                <div class="grid-4" id="destacados" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section class="section section-gray section-benefits" id="nosotros" aria-labelledby="titulo-beneficios">
+            <div class="container">
+                <div class="section-center">
+                    <span class="eyebrow">Beneficios</span>
+                    <h2 class="title-32" id="titulo-beneficios">¿Por qué elegirnos?</h2>
+                </div>
+                <div class="benefits">
+                    <article class="benefit">
+                        <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+                        <h3>Seguridad y confianza</h3>
+                        <p>Inmuebles verificados y procesos claros en contratos y pagos.</p>
                     </article>
-                    <article class="feature-box">
-                        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M4 13h5l1 3h4l1-3h5"/></svg></span>
-                        <h3>Solicita una visita</h3>
-                        <p>Envía tu solicitud desde la ficha del inmueble y haz seguimiento en Mi cuenta.</p>
+                    <article class="benefit">
+                        <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                        <h3>Expertos en el Suroeste</h3>
+                        <p>Conocemos Jardín, Jericó, Andes, Támesis y todos los municipios de la región.</p>
                     </article>
-                    <article class="feature-box">
-                        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6v18h12V7z"/><path d="M14 3v4h4M9 13h6M9 17h6"/></svg></span>
-                        <h3>Contratos y pagos</h3>
-                        <p>Consulta tus contratos de arriendo o compra y el estado de cada pago.</p>
+                    <article class="benefit">
+                        <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span>
+                        <h3>Guarda tus favoritos</h3>
+                        <p>Crea tu cuenta y guarda los inmuebles que más te interesan.</p>
                     </article>
+                    <article class="benefit">
+                        <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h6"/></svg></span>
+                        <h3>Atención personalizada</h3>
+                        <p>Envía solicitudes de información y haz seguimiento desde Mi cuenta.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-wrap" aria-labelledby="titulo-cta">
+            <div class="container">
+                <div class="cta">
+                    <div>
+                        <h2 id="titulo-cta">Encuentra el inmueble ideal para ti</h2>
+                        <p>Explora el catálogo o publica tu propiedad en minutos.</p>
+                    </div>
+                    <div class="cta-buttons">
+                        <a class="btn btn-primary" href="catalogo.html">Ver inmuebles</a>
+                        <a class="btn btn-outline" href="publicar.html">Publicar inmueble</a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer" id="contacto">
         <div class="container">
-            <div class="footer-grid">
-                <section>
-                    <a class="brand" href="index.html">
-                <img src="assets/img/logo.jpg" alt="" width="44" height="44">
-                <span>Tu Inmueble <small>Suroeste</small></span>
-            </a>
-                    <p>Plataforma inmobiliaria para comprar, vender y arrendar casas, apartamentos, fincas, lotes y locales en el Suroeste Antioqueño.</p>
-                </section>
-                <nav aria-label="Navegación del pie de página">
-                    <h2>Navegación</h2>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="catalogo.html">Inmuebles</a></li>
-                        <li><a href="favoritos.html">Favoritos</a></li>
-                        <li><a href="publicar.html">Publicar inmueble</a></li>
-                    </ul>
-                </nav>
-                <section>
-                    <h2>Municipios</h2>
-                    <ul>
-                        <li><a href="catalogo.html?municipio=Andes">Andes</a></li>
-                        <li><a href="catalogo.html?municipio=Jard%C3%ADn">Jardín</a></li>
-                        <li><a href="catalogo.html?municipio=Jeric%C3%B3">Jericó</a></li>
-                        <li><a href="catalogo.html?municipio=Ciudad%20Bol%C3%ADvar">Ciudad Bolívar</a></li>
-                    </ul>
-                </section>
-                <section>
-                    <h2>Contacto</h2>
-                    <ul>
-                        <li>Andes, Antioquia</li>
-                        <li><a href="mailto:contacto@tuinmueblesuroeste.co">contacto@tuinmueblesuroeste.co</a></li>
-                        <li><a href="tel:+576048410000">(604) 841 0000</a></li>
-                    </ul>
-                </section>
+            <div class="footer-brand">
+                <a class="logo-box" href="index.html"><img src="assets/img/logo.jpg" alt="Tu Inmueble Suroeste" width="124" height="60"></a>
+                <p>Plataforma inmobiliaria del Suroeste Antioqueño.<br>Compra, vende o arrienda con confianza.</p>
             </div>
-            <p class="footer-bottom">© <span data-year>2026</span> Tu Inmueble Suroeste · Proyecto formativo SENA – Análisis y Desarrollo de Software.</p>
+            <nav class="footer-col" aria-labelledby="f-nav">
+                <h2 id="f-nav">Navegación</h2>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Inmuebles</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <section class="footer-col" aria-labelledby="f-mun">
+                <h2 id="f-mun">Municipios</h2>
+                <ul>
+                    <li>Jardín · Jericó · Andes</li>
+                    <li>Ciudad Bolívar · Hispania</li>
+                    <li>Fredonia · Támesis</li>
+                </ul>
+            </section>
+            <section class="footer-col" aria-labelledby="f-con">
+                <h2 id="f-con">Contacto</h2>
+                <ul>
+                    <li><a href="mailto:contacto@tuinmueblesuroeste.co">contacto@tuinmueblesuroeste.co</a></li>
+                    <li><a href="tel:+573000000000">+57 300 000 0000</a></li>
+                    <li>Suroeste Antioqueño, Colombia</li>
+                </ul>
+            </section>
         </div>
     </footer>
 
-    <nav class="bottom-nav" aria-label="Navegación móvil">
+    <nav class="bottom-nav" aria-label="Navegación inferior">
         <ul>
-            <li><a href="index.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>Inicio</a></li>
-            <li><a href="catalogo.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Buscar</a></li>
-            <li><a href="favoritos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.1 0 3.6 1.2 5.2 3 1.6-1.8 3.1-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z"/></svg>Favoritos</a></li>
-            <li><a href="mi-cuenta.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Mi cuenta</a></li>
+            <li><a href="index.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></svg>Inicio</a></li>
+            <li><a href="catalogo.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>Buscar</a></li>
+            <li><a href="favoritos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>Favoritos</a></li>
+            <li><a href="mi-cuenta.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Mi cuenta</a></li>
         </ul>
     </nav>
 

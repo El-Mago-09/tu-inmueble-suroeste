@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publicar inmueble | Tu Inmueble Suroeste</title>
-    <meta name="description" content="Publica tu casa, apartamento, finca, lote o local.">
+    <title>Publica tu inmueble | Tu Inmueble Suroeste</title>
+    <meta name="description" content="Publica tu casa, apartamento, terreno o local en el Suroeste Antioqueño.">
     <link rel="icon" href="assets/img/logo.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,212 +12,201 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body data-page="" data-base="">
+<body data-page="publicar" class="bg-gray">
 
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <header class="site-header">
         <div class="container">
-            <a class="brand" href="index.html">
-                <img src="assets/img/logo.jpg" alt="" width="44" height="44">
-                <span>Tu Inmueble <small>Suroeste</small></span>
-            </a>
-            <nav class="main-nav" id="menu-principal" aria-label="Navegación principal">
+            <a class="logo" href="index.html"><img src="assets/img/logo.jpg" alt="Tu Inmueble Suroeste - Inicio" width="124" height="60"></a>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Inmuebles</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a class="btn btn-ghost" href="favoritos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>Favoritos</a>
+                <a class="btn btn-outline" href="login.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Ingresar</a>
+                <a class="btn btn-primary" href="publicar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/></svg>Publicar inmueble</a>
+            </div>
+            <button type="button" class="menu-btn" aria-controls="menu-movil" aria-expanded="false" aria-label="Abrir menú"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+            <nav class="mobile-menu" id="menu-movil" aria-label="Menú">
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="catalogo.html">Inmuebles</a></li>
                     <li><a href="favoritos.html">Favoritos</a></li>
                     <li><a href="mi-cuenta.html">Mi cuenta</a></li>
+                    <li><a href="mailto:contacto@tuinmueblesuroeste.co">Contacto</a></li>
                 </ul>
+                <div class="menu-actions">
+                    <a class="btn btn-outline" href="login.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Ingresar</a>
+                    <a class="btn btn-primary" href="publicar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/></svg>Publicar</a>
+                </div>
             </nav>
-            <div class="header-actions">
-                <a class="icon-link" href="favoritos.html" aria-label="Favoritos">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.1 0 3.6 1.2 5.2 3 1.6-1.8 3.1-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z"/></svg>
-                    <span class="fav-count" hidden>0</span>
-                </a>
-                <a class="icon-link" href="login.html" aria-label="Ingresar o crear cuenta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></a>
-                <a class="btn btn-primary" href="publicar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Publicar inmueble</a>
-                <button type="button" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
-            </div>
         </div>
     </header>
 
-    <main id="contenido">
-        <section class="page-title">
-            <div class="container">
-                <nav class="breadcrumb" aria-label="Ruta de navegación">
-                    <ol>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li aria-current="page">Publicar inmueble</li>
-                    </ol>
-                </nav>
-                <h1>Publicar inmueble</h1>
-                <p class="text-secondary">Completa la información; nuestro equipo la revisará antes de publicarla en el catálogo.</p>
-                <ol class="steps" aria-label="Pasos de la publicación">
-                    <li>Información general</li>
-                    <li>Ubicación</li>
-                    <li>Características</li>
-                    <li>Fotografías</li>
-                </ol>
+    <main id="contenido" class="container">
+        <div class="publish">
+            <a class="link-gold" href="mi-cuenta.html">← Volver a Mi cuenta</a>
+            <div class="heading">
+                <h1 class="title-40">Publica tu inmueble</h1>
+                <p class="text-2">Completa la información. Los campos marcados con * son obligatorios.</p>
             </div>
-        </section>
+            <nav aria-label="Pasos del formulario">
+                <ol class="steps">
+                    <li><a href="#general" aria-current="step">1 · General</a></li>
+                    <li><a href="#ubicacion">2 · Ubicación</a></li>
+                    <li><a href="#precio">3 · Precio</a></li>
+                    <li><a href="#caracteristicas">4 · Características</a></li>
+                    <li><a href="#descripcion">5 · Descripción</a></li>
+                    <li><a href="#fotos">6 · Fotos</a></li>
+                </ol>
+            </nav>
 
-        <section class="container" style="padding-bottom:64px">
-            <form data-validate>
-                <div class="alert alert-success" role="status" tabindex="-1" hidden>Tu inmueble fue enviado a revisión. Te avisaremos cuando esté publicado.</div>
+            <form id="form-publicar" data-validate>
+                <div class="alert alert-success" role="status" tabindex="-1" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Tu inmueble fue enviado a revisión. Un administrador lo aprobará antes de publicarlo en el catálogo.</span></div>
                 <div class="alert alert-error" role="alert" hidden>Faltan datos obligatorios. Revisa los campos marcados.</div>
 
-                <fieldset>
-                    <legend>1. Información general</legend>
-                    <div class="form-grid">
-                        <div class="form-field full">
-                            <label for="p-titulo">Título del anuncio</label>
-                            <input type="text" id="p-titulo" name="titulo" maxlength="150" placeholder="Ej. Casa campestre con vista a la montaña" required>
+                <section class="form-card" id="general" aria-labelledby="t-general">
+                    <h2 class="form-card-title" id="t-general"><span class="step-num">1</span>INFORMACIÓN GENERAL</h2>
+                    <div class="field">
+                        <label for="p-titulo">Título del inmueble *</label>
+                        <div class="input-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M10 9H8M16 13H8M16 17H8"/></svg><input class="control" id="p-titulo" name="titulo" maxlength="150" placeholder="Ej: Casa campestre con vista a las montañas" required></div>
+                    </div>
+                    <div class="row-2">
+                        <div class="field">
+                            <span class="field-label" id="l-operacion">Operación *</span>
+                            <div class="segmented full" role="radiogroup" aria-labelledby="l-operacion">
+                                <label><input type="radio" name="operacion" value="venta" checked><span>Venta</span></label>
+                                <label><input type="radio" name="operacion" value="arriendo"><span>Arriendo</span></label>
+                            </div>
                         </div>
-                        <div class="form-field">
-                            <label for="p-tipo">Tipo de inmueble</label>
-                            <select id="p-tipo" name="tipo" required>
-                                <option value="">Selecciona</option>
-                                <option value="casa">Casa</option>
-                            <option value="apartamento">Apartamento</option>
-                            <option value="finca">Finca</option>
-                            <option value="lote">Lote</option>
-                            <option value="local">Local</option>
-                            </select>
-                        </div>
-                        <div class="form-field">
-                            <label for="p-operacion">Operación</label>
-                            <select id="p-operacion" name="operacion" required>
-                                <option value="">Selecciona</option>
-                                <option value="venta">Venta</option>
-                                <option value="arriendo">Arriendo</option>
-                            </select>
-                        </div>
-                        <div class="form-field">
-                            <label for="p-precio">Precio (COP)</label>
-                            <input type="number" id="p-precio" name="precio" min="1" placeholder="Ej. 350000000" required>
-                            <p class="field-hint">En arriendo, escribe el valor mensual.</p>
-                        </div>
-                        <div class="form-field full">
-                            <label for="p-descripcion">Descripción</label>
-                            <textarea id="p-descripcion" name="descripcion" minlength="30" placeholder="Describe el inmueble, su estado y lo que lo hace especial" required></textarea>
+                        <div class="field">
+                            <label for="p-tipo">Tipo de inmueble *</label>
+                            <select class="control" id="p-tipo" name="tipo" required><option value="">Selecciona</option><option value="casa" selected>Casa</option><option value="apartamento">Apartamento</option><option value="terreno">Terreno</option><option value="local">Local</option></select>
                         </div>
                     </div>
-                </fieldset>
+                    <div class="type-chips" role="radiogroup" aria-label="Tipos disponibles">
+                        <label><input type="radio" name="tipo_chip" value="casa" checked><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></svg>Casa</span></label>
+                        <label><input type="radio" name="tipo_chip" value="apartamento"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></svg>Apartamento</span></label>
+                        <label><input type="radio" name="tipo_chip" value="terreno"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0ZM7 16v6M13 19v3"/><path d="M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5"/></svg>Terreno</span></label>
+                        <label><input type="radio" name="tipo_chip" value="local"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4M2 7h20M22 7v3a2 2 0 0 1-2 2 2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7"/></svg>Local</span></label>
+                    </div>
+                </section>
 
-                <fieldset>
-                    <legend>2. Ubicación</legend>
-                    <div class="form-grid">
-                        <div class="form-field">
-                            <label for="p-municipio">Municipio</label>
-                            <select id="p-municipio" name="municipio" required>
-                                <option value="">Selecciona</option>
-                                <option value="Andes">Andes</option>
-                            <option value="Betania">Betania</option>
-                            <option value="Ciudad Bolívar">Ciudad Bolívar</option>
-                            <option value="Hispania">Hispania</option>
-                            <option value="Jardín">Jardín</option>
-                            <option value="Jericó">Jericó</option>
-                            <option value="Támesis">Támesis</option>
-                            </select>
+                <section class="form-card" id="ubicacion" aria-labelledby="t-ubicacion">
+                    <h2 class="form-card-title" id="t-ubicacion"><span class="step-num">2</span>UBICACIÓN</h2>
+                    <div class="row-2">
+                        <div class="field">
+                            <label for="p-departamento">Departamento *</label>
+                            <select class="control" id="p-departamento" name="departamento" required><option value="Antioquia" selected>Antioquia</option></select>
                         </div>
-                        <div class="form-field">
-                            <label for="p-direccion">Dirección o vereda</label>
-                            <input type="text" id="p-direccion" name="direccion" placeholder="Ej. Calle 50 # 49-21" required>
+                        <div class="field">
+                            <label for="p-municipio">Municipio *</label>
+                            <select class="control" id="p-municipio" name="municipio" required><option value="">Selecciona</option><option value="Jardín" selected>Jardín</option><option value="Jericó">Jericó</option><option value="Andes">Andes</option><option value="Ciudad Bolívar">Ciudad Bolívar</option><option value="Hispania">Hispania</option><option value="Fredonia">Fredonia</option><option value="Támesis">Támesis</option></select>
                         </div>
                     </div>
-                </fieldset>
+                    <div class="field">
+                        <label for="p-direccion">Dirección o sector *</label>
+                        <input class="control" id="p-direccion" name="direccion" placeholder="Ej: Vereda La Herrera, a 5 min del parque" required>
+                    </div>
+                </section>
 
-                <fieldset>
-                    <legend>3. Características</legend>
-                    <div class="form-grid">
-                        <div class="form-field">
-                            <label for="p-habitaciones">Habitaciones</label>
-                            <input type="number" id="p-habitaciones" name="habitaciones" min="0" value="0">
-                        </div>
-                        <div class="form-field">
-                            <label for="p-banos">Baños</label>
-                            <input type="number" id="p-banos" name="banos" min="0" value="0">
-                        </div>
-                        <div class="form-field">
-                            <label for="p-area">Área (m²)</label>
-                            <input type="number" id="p-area" name="area" min="1" required>
-                        </div>
-                        <div class="form-field">
-                            <label for="p-parqueadero">Parqueadero</label>
-                            <select id="p-parqueadero" name="parqueadero">
-                                <option value="no">No</option>
-                                <option value="1">1 vehículo</option>
-                                <option value="2">2 o más vehículos</option>
-                            </select>
+                <section class="form-card" id="precio" aria-labelledby="t-precio">
+                    <h2 class="form-card-title" id="t-precio"><span class="step-num">3</span>INFORMACIÓN ECONÓMICA</h2>
+                    <div class="row-2">
+                        <div class="field">
+                            <label for="p-precio">Precio COP *</label>
+                            <input class="control" id="p-precio" name="precio" inputmode="numeric" placeholder="$ 480.000.000" pattern="[$ 0-9.]{5,}" data-pattern-msg="Escribe el valor en números, por ejemplo 480.000.000." required aria-describedby="p-precio-ayuda">
+                            <p class="hint" id="p-precio-ayuda">Para arriendo, indica el valor mensual en COP.</p>
                         </div>
                     </div>
-                </fieldset>
+                </section>
 
-                <fieldset>
-                    <legend>4. Fotografías</legend>
-                    <div class="form-field">
-                        <label for="p-fotos">Sube entre 3 y 10 fotografías</label>
-                        <input type="file" id="p-fotos" name="fotos" accept="image/*" multiple required>
-                        <p class="field-hint">Formatos JPG o PNG, máximo 5 MB por imagen.</p>
+                <section class="form-card" id="caracteristicas" aria-labelledby="t-caracteristicas">
+                    <h2 class="form-card-title" id="t-caracteristicas"><span class="step-num">4</span>CARACTERÍSTICAS</h2>
+                    <div class="row-4">
+                        <div class="field"><label for="p-hab">Habitaciones</label><input class="control" type="number" id="p-hab" name="habitaciones" min="0" placeholder="4"></div>
+                        <div class="field"><label for="p-banos">Baños</label><input class="control" type="number" id="p-banos" name="banos" min="0" placeholder="3"></div>
+                        <div class="field"><label for="p-area">Área m²</label><input class="control" type="number" id="p-area" name="area" min="1" placeholder="220" required></div>
+                        <div class="field"><label for="p-parq">Parqueaderos</label><input class="control" type="number" id="p-parq" name="parqueaderos" min="0" placeholder="2"></div>
                     </div>
-                    <label class="checkbox"><input type="checkbox" name="confirmacion" required> Confirmo que soy propietario o estoy autorizado para publicar este inmueble.</label>
-                </fieldset>
+                </section>
+
+                <section class="form-card" id="descripcion" aria-labelledby="t-descripcion">
+                    <h2 class="form-card-title" id="t-descripcion"><span class="step-num">5</span>DESCRIPCIÓN</h2>
+                    <div class="field">
+                        <label for="p-descripcion">Descripción del inmueble *</label>
+                        <textarea class="control" id="p-descripcion" name="descripcion" minlength="30" maxlength="1000" placeholder="Describe los espacios, acabados, accesos y beneficios del inmueble…" required aria-describedby="p-desc-ayuda"></textarea>
+                        <p class="hint" id="p-desc-ayuda">Máximo 1.000 caracteres.</p>
+                    </div>
+                </section>
+
+                <section class="form-card" id="fotos" aria-labelledby="t-fotos">
+                    <h2 class="form-card-title" id="t-fotos"><span class="step-num">6</span>FOTOS</h2>
+                    <div class="field">
+                        <div class="dropzone">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"/></svg>
+                            <strong>Arrastra tus fotos aquí o haz clic para seleccionarlas</strong>
+                            <span>JPG o PNG · máximo 10 fotos · 5 MB cada una</span>
+                            <label class="btn btn-outline" for="p-fotos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/></svg>Seleccionar archivos</label>
+                            <input class="visually-hidden" type="file" id="p-fotos" name="fotos" accept="image/jpeg,image/png" multiple required>
+                        </div>
+                    </div>
+                    <div class="previews" id="previews" aria-live="polite"></div>
+                </section>
 
                 <div class="form-actions">
-                    <a class="btn btn-outline" href="mi-cuenta.html">Cancelar</a>
-                    <button type="submit" class="btn btn-primary">Publicar inmueble</button>
+                    <button type="button" class="btn btn-outline" id="guardar-borrador">Guardar borrador</button>
+                    <button type="submit" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/></svg>Publicar inmueble</button>
                 </div>
             </form>
-        </section>
+        </div>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer" id="contacto">
         <div class="container">
-            <div class="footer-grid">
-                <section>
-                    <a class="brand" href="index.html">
-                <img src="assets/img/logo.jpg" alt="" width="44" height="44">
-                <span>Tu Inmueble <small>Suroeste</small></span>
-            </a>
-                    <p>Plataforma inmobiliaria para comprar, vender y arrendar casas, apartamentos, fincas, lotes y locales en el Suroeste Antioqueño.</p>
-                </section>
-                <nav aria-label="Navegación del pie de página">
-                    <h2>Navegación</h2>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="catalogo.html">Inmuebles</a></li>
-                        <li><a href="favoritos.html">Favoritos</a></li>
-                        <li><a href="publicar.html">Publicar inmueble</a></li>
-                    </ul>
-                </nav>
-                <section>
-                    <h2>Municipios</h2>
-                    <ul>
-                        <li><a href="catalogo.html?municipio=Andes">Andes</a></li>
-                        <li><a href="catalogo.html?municipio=Jard%C3%ADn">Jardín</a></li>
-                        <li><a href="catalogo.html?municipio=Jeric%C3%B3">Jericó</a></li>
-                        <li><a href="catalogo.html?municipio=Ciudad%20Bol%C3%ADvar">Ciudad Bolívar</a></li>
-                    </ul>
-                </section>
-                <section>
-                    <h2>Contacto</h2>
-                    <ul>
-                        <li>Andes, Antioquia</li>
-                        <li><a href="mailto:contacto@tuinmueblesuroeste.co">contacto@tuinmueblesuroeste.co</a></li>
-                        <li><a href="tel:+576048410000">(604) 841 0000</a></li>
-                    </ul>
-                </section>
+            <div class="footer-brand">
+                <a class="logo-box" href="index.html"><img src="assets/img/logo.jpg" alt="Tu Inmueble Suroeste" width="124" height="60"></a>
+                <p>Plataforma inmobiliaria del Suroeste Antioqueño.<br>Compra, vende o arrienda con confianza.</p>
             </div>
-            <p class="footer-bottom">© <span data-year>2026</span> Tu Inmueble Suroeste · Proyecto formativo SENA – Análisis y Desarrollo de Software.</p>
+            <nav class="footer-col" aria-labelledby="f-nav">
+                <h2 id="f-nav">Navegación</h2>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Inmuebles</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <section class="footer-col" aria-labelledby="f-mun">
+                <h2 id="f-mun">Municipios</h2>
+                <ul>
+                    <li>Jardín · Jericó · Andes</li>
+                    <li>Ciudad Bolívar · Hispania</li>
+                    <li>Fredonia · Támesis</li>
+                </ul>
+            </section>
+            <section class="footer-col" aria-labelledby="f-con">
+                <h2 id="f-con">Contacto</h2>
+                <ul>
+                    <li><a href="mailto:contacto@tuinmueblesuroeste.co">contacto@tuinmueblesuroeste.co</a></li>
+                    <li><a href="tel:+573000000000">+57 300 000 0000</a></li>
+                    <li>Suroeste Antioqueño, Colombia</li>
+                </ul>
+            </section>
         </div>
     </footer>
 
-    <nav class="bottom-nav" aria-label="Navegación móvil">
+    <nav class="bottom-nav" aria-label="Navegación inferior">
         <ul>
-            <li><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>Inicio</a></li>
-            <li><a href="catalogo.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Buscar</a></li>
-            <li><a href="favoritos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.1 0 3.6 1.2 5.2 3 1.6-1.8 3.1-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z"/></svg>Favoritos</a></li>
-            <li><a href="mi-cuenta.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Mi cuenta</a></li>
+            <li><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></svg>Inicio</a></li>
+            <li><a href="catalogo.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>Buscar</a></li>
+            <li><a href="favoritos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>Favoritos</a></li>
+            <li><a href="mi-cuenta.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Mi cuenta</a></li>
         </ul>
     </nav>
 

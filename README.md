@@ -5,7 +5,10 @@ Plataforma inmobiliaria para consultar y gestionar inmuebles en venta y arriendo
 Proyecto formativo SENA · Análisis y Desarrollo de Software · Ficha 3336217
 Aprendiz: Ometh Martinez Potes · Instructor: Edgar Camilo Figueroa Rivera
 
-Implementación de los componentes definidos en el documento **GA6-220501096-AA4-EV02 – Establecer los componentes front-end de la aplicación web**, a partir de las interfaces diseñadas en Figma (Desktop D01–D15 y Mobile M01–M05).
+Implementación de los componentes definidos en el documento **GA6-220501096-AA4-EV02 – Establecer los componentes front-end de la aplicación web**, con la apariencia de las interfaces aprobadas en Figma EV03 (Desktop D01–D15 y Mobile M01–M05).
+
+- **EV02** define la estructura técnica: qué componentes HTML y CSS se usan.
+- **Figma EV03** es la fuente de verdad visual: textos, colores, medidas, distribución, fotografías e iconos se tomaron de cada pantalla de Figma.
 
 **Sitio publicado:** https://el-mago-09.github.io/tu-inmueble-suroeste/
 
@@ -42,14 +45,16 @@ tu-inmueble-suroeste/
 └── assets/img/           Logotipo
 ```
 
-Los iconos son SVG en línea dentro del HTML, por eso no hay carpeta `assets/icons`. Las fotografías se cargan desde Unsplash, igual que en los diseños de Figma.
+Los iconos son SVG en línea dentro del HTML, por eso no hay carpeta `assets/icons`. Las fotografías son las mismas de Figma (Unsplash) y cada inmueble usa la foto que tiene en su pantalla de Figma.
+
+En Mobile (≤ 768 px) se aplican las pantallas M01–M05: header de 64 px con menú, barra inferior Inicio / Buscar / Favoritos / Mi cuenta, categorías en Home, botón Filtros y chips en el catálogo, galería a pantalla completa y barra Guardar / Solicitar información en el detalle, tarjetas horizontales en Favoritos y banda de perfil con módulos en Mi cuenta. Como las pantallas Mobile de Figma no incluyen beneficios, CTA ni footer, esas secciones se ocultan en móvil.
 
 ## Componentes implementados (según EV02)
 
 | Componente | Implementación |
 |---|---|
-| Header | `<header class="site-header">`: logotipo, `<nav>` principal, favoritos con contador, acceso de usuario y botón "Publicar inmueble". En el área administrativa: logotipo, rol y enlace al sitio público. |
-| Navigation | Menú principal con ítem activo (`aria-current`), menú plegable en móvil, barra inferior móvil (Inicio, Buscar, Favoritos, Mi cuenta), migas de pan `<ol>` y menú lateral administrativo. |
+| Header | `<header class="site-header">` (Navbar/Desktop de Figma): logotipo, menú Inicio · Inmuebles · Nosotros · Contacto, Favoritos, Ingresar y Publicar inmueble. Bajo 1100 px se pliega en un menú con botón. |
+| Navigation | Menú principal con ítem activo (`aria-current`), menú plegable, barra inferior móvil (Inicio, Buscar, Favoritos, Mi cuenta), migas de pan y menú lateral de Mi cuenta y de administración. |
 | Main / Sections | Un `<main>` por página; `<section>` para hero, búsqueda, destacados, municipios, filtros, descripción, características y contenido administrativo. |
 | Cards | `<article class="card-inmueble">` reutilizable, generado por `crearTarjeta()`: imagen, badge Venta/Arriendo, municipio, tipo, título, precio en COP, habitaciones, baños, área, botón de favorito y enlace al detalle. |
 | Forms | Búsqueda, filtros, solicitud de visita, login, registro, recuperar contraseña y publicar inmueble (con `<fieldset>` y pasos `<ol>`). Todos con `<label>` visible y validación (`data-validate`). |
@@ -75,7 +80,7 @@ Tipografía Inter. Botones Primary, Secondary y Outline con estados `:hover`, `:
 
 ## Accesibilidad
 
-Un solo `<h1>` por página, enlace "Saltar al contenido", `alt` en todas las imágenes, `<label>` en todos los campos, foco visible, áreas táctiles de 44 px o más, mensajes de error asociados con `aria-describedby` y estados que no dependen solo del color.
+Un solo `<h1>` por página, enlace "Saltar al contenido", `alt` en todas las imágenes, `<label>` en todos los campos, foco visible, áreas táctiles de 44 px o más en navegación, botones principales y formularios, mensajes de error asociados con `aria-describedby` y estados que no dependen solo del color.
 
 ## Cómo ejecutarlo
 

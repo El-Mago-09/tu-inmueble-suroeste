@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear cuenta | Tu Inmueble Suroeste</title>
-    <meta name="description" content="Regístrate en Tu Inmueble Suroeste.">
+    <title>Crea tu cuenta | Tu Inmueble Suroeste</title>
+    <meta name="description" content="Regístrate para guardar inmuebles, enviar solicitudes y publicar propiedades.">
     <link rel="icon" href="assets/img/logo.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,130 +12,57 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body data-page="" data-base="">
-
+<body data-page="" class="no-bottom-nav">
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
-    <header class="site-header">
-        <div class="container">
-            <a class="brand" href="index.html">
-                <img src="assets/img/logo.jpg" alt="" width="44" height="44">
-                <span>Tu Inmueble <small>Suroeste</small></span>
-            </a>
-            <nav class="main-nav" id="menu-principal" aria-label="Navegación principal">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="catalogo.html">Inmuebles</a></li>
-                    <li><a href="favoritos.html">Favoritos</a></li>
-                    <li><a href="mi-cuenta.html" aria-current="page">Mi cuenta</a></li>
-                </ul>
-            </nav>
-            <div class="header-actions">
-                <a class="icon-link" href="favoritos.html" aria-label="Favoritos">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.1 0 3.6 1.2 5.2 3 1.6-1.8 3.1-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z"/></svg>
-                    <span class="fav-count" hidden>0</span>
-                </a>
-                <a class="icon-link" href="login.html" aria-label="Ingresar o crear cuenta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></a>
-                <a class="btn btn-primary" href="publicar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Publicar inmueble</a>
-                <button type="button" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
-            </div>
-        </div>
-    </header>
 
-    <main id="contenido">
-        <section class="auth-page">
-            <div class="auth-card wide">
-                <span class="eyebrow">Nuevo usuario</span>
-                <h1>Crear cuenta</h1>
-                <p class="text-secondary">Regístrate para guardar inmuebles, enviar solicitudes y publicar tus propiedades.</p>
+    <main id="contenido" class="auth">
+        <aside class="auth-image" style="background-image: linear-gradient(rgba(15, 31, 61, 0.78), rgba(15, 31, 61, 0.78)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1400&q=70&auto=format&fit=crop')">
+            <a class="logo-box" href="index.html"><img src="assets/img/logo.jpg" alt="Tu Inmueble Suroeste - Inicio" width="124" height="60"></a>
+            <div class="auth-message">
+                <p class="auth-title">Tu próximo hogar en el Suroeste te espera</p>
+                <p>Guarda favoritos, envía solicitudes y consulta tus contratos y pagos desde un solo lugar.</p>
+            </div>
+            <p class="towns">Jardín · Jericó · Andes · Ciudad Bolívar · Hispania · Fredonia · Támesis</p>
+        </aside>
+        <section class="auth-panel">
+            <div class="auth-form">
+                <a class="auth-mobile-logo" href="index.html"><img src="assets/img/logo.jpg" alt="Tu Inmueble Suroeste - Inicio" width="124" height="60"></a>
+                <h1>Crea tu cuenta</h1>
+                <p class="lead">Regístrate para guardar inmuebles, enviar solicitudes y publicar propiedades.</p>
                 <form data-validate>
-                    <div class="alert alert-success" role="status" tabindex="-1" hidden>¡Cuenta creada! Ya puedes <a href="login.html">ingresar</a>.</div>
+                    <div class="alert alert-success" role="status" tabindex="-1" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>¡Cuenta creada! Ya puedes <a href="login.html">iniciar sesión</a>.</span></div>
                     <div class="alert alert-error" role="alert" hidden>Hay campos por corregir.</div>
-                    <div class="form-grid">
-                        <div class="form-field">
-                            <label for="r-nombre">Nombre</label>
-                            <input type="text" id="r-nombre" name="nombre" autocomplete="given-name" required>
-                        </div>
-                        <div class="form-field">
-                            <label for="r-apellido">Apellido</label>
-                            <input type="text" id="r-apellido" name="apellido" autocomplete="family-name" required>
-                        </div>
-                        <div class="form-field">
-                            <label for="r-correo">Correo electrónico</label>
-                            <input type="email" id="r-correo" name="correo" autocomplete="email" placeholder="nombre@correo.com" required>
-                        </div>
-                        <div class="form-field">
-                            <label for="r-telefono">Teléfono</label>
-                            <input type="tel" id="r-telefono" name="telefono" autocomplete="tel" placeholder="300 000 0000" pattern="[0-9 ]{7,15}" data-pattern-msg="Escribe solo números (7 a 10 dígitos).">
-                        </div>
-                        <div class="form-field">
+                    <div class="field">
+                        <label for="r-nombre">Nombre completo</label>
+                        <input class="control" type="text" id="r-nombre" name="nombre" autocomplete="name" placeholder="Ometh Martinez Potes" required>
+                    </div>
+                    <div class="field">
+                        <label for="r-correo">Correo electrónico</label>
+                        <input class="control" type="email" id="r-correo" name="correo" autocomplete="email" placeholder="nombre@correo.com" required>
+                    </div>
+                    <div class="field">
+                        <label for="r-telefono">Teléfono</label>
+                        <input class="control" type="tel" id="r-telefono" name="telefono" autocomplete="tel" placeholder="300 000 0000" pattern="[0-9 ]{7,15}" data-pattern-msg="Escribe solo números (7 a 10 dígitos)." required>
+                    </div>
+                    <div class="two-cols">
+                        <div class="field">
                             <label for="r-contrasena">Contraseña</label>
-                            <input type="password" id="r-contrasena" name="contrasena" autocomplete="new-password" minlength="8" required aria-describedby="r-ayuda">
-                            <p class="field-hint" id="r-ayuda">Mínimo 8 caracteres.</p>
+                            <input class="control" type="password" id="r-contrasena" name="contrasena" autocomplete="new-password" placeholder="••••••••" minlength="8" required>
                         </div>
-                        <div class="form-field">
+                        <div class="field">
                             <label for="r-confirmar">Confirmar contraseña</label>
-                            <input type="password" id="r-confirmar" name="confirmar" autocomplete="new-password" data-match="r-contrasena" required>
-                        </div>
-                        <div class="form-field full">
-                            <label class="checkbox"><input type="checkbox" name="terminos" required> Acepto los términos de uso y la política de tratamiento de datos personales.</label>
+                            <input class="control" type="password" id="r-confirmar" name="confirmar" autocomplete="new-password" placeholder="••••••••" data-match="r-contrasena" required>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Registrarme</button>
+                    <div class="field">
+                        <label class="check"><input type="checkbox" name="terminos" value="si" required><span class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Acepto los términos y condiciones.</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Crear cuenta</button>
                 </form>
-                <p class="auth-footer">¿Ya tienes cuenta? <a href="login.html">Ingresar</a></p>
+                <p class="center-link">¿Ya tienes cuenta? <a class="link-gold" href="login.html">Inicia sesión.</a></p>
             </div>
         </section>
     </main>
-
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <section>
-                    <a class="brand" href="index.html">
-                <img src="assets/img/logo.jpg" alt="" width="44" height="44">
-                <span>Tu Inmueble <small>Suroeste</small></span>
-            </a>
-                    <p>Plataforma inmobiliaria para comprar, vender y arrendar casas, apartamentos, fincas, lotes y locales en el Suroeste Antioqueño.</p>
-                </section>
-                <nav aria-label="Navegación del pie de página">
-                    <h2>Navegación</h2>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="catalogo.html">Inmuebles</a></li>
-                        <li><a href="favoritos.html">Favoritos</a></li>
-                        <li><a href="publicar.html">Publicar inmueble</a></li>
-                    </ul>
-                </nav>
-                <section>
-                    <h2>Municipios</h2>
-                    <ul>
-                        <li><a href="catalogo.html?municipio=Andes">Andes</a></li>
-                        <li><a href="catalogo.html?municipio=Jard%C3%ADn">Jardín</a></li>
-                        <li><a href="catalogo.html?municipio=Jeric%C3%B3">Jericó</a></li>
-                        <li><a href="catalogo.html?municipio=Ciudad%20Bol%C3%ADvar">Ciudad Bolívar</a></li>
-                    </ul>
-                </section>
-                <section>
-                    <h2>Contacto</h2>
-                    <ul>
-                        <li>Andes, Antioquia</li>
-                        <li><a href="mailto:contacto@tuinmueblesuroeste.co">contacto@tuinmueblesuroeste.co</a></li>
-                        <li><a href="tel:+576048410000">(604) 841 0000</a></li>
-                    </ul>
-                </section>
-            </div>
-            <p class="footer-bottom">© <span data-year>2026</span> Tu Inmueble Suroeste · Proyecto formativo SENA – Análisis y Desarrollo de Software.</p>
-        </div>
-    </footer>
-
-    <nav class="bottom-nav" aria-label="Navegación móvil">
-        <ul>
-            <li><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>Inicio</a></li>
-            <li><a href="catalogo.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Buscar</a></li>
-            <li><a href="favoritos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.1 0 3.6 1.2 5.2 3 1.6-1.8 3.1-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z"/></svg>Favoritos</a></li>
-            <li><a href="mi-cuenta.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Mi cuenta</a></li>
-        </ul>
-    </nav>
 
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>

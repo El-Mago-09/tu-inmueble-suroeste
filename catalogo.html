@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inmuebles | Tu Inmueble Suroeste</title>
+    <title>Inmuebles disponibles | Tu Inmueble Suroeste</title>
     <meta name="description" content="Catálogo de inmuebles en venta y arriendo en el Suroeste Antioqueño.">
     <link rel="icon" href="assets/img/logo.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,175 +12,186 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body data-page="catalogo" data-base="">
+<body data-page="catalogo" class="bg-gray">
 
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <header class="site-header">
         <div class="container">
-            <a class="brand" href="index.html">
-                <img src="assets/img/logo.jpg" alt="" width="44" height="44">
-                <span>Tu Inmueble <small>Suroeste</small></span>
-            </a>
-            <nav class="main-nav" id="menu-principal" aria-label="Navegación principal">
+            <a class="logo" href="index.html"><img src="assets/img/logo.jpg" alt="Tu Inmueble Suroeste - Inicio" width="124" height="60"></a>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html" aria-current="page">Inmuebles</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a class="btn btn-ghost" href="favoritos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>Favoritos</a>
+                <a class="btn btn-outline" href="login.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Ingresar</a>
+                <a class="btn btn-primary" href="publicar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/></svg>Publicar inmueble</a>
+            </div>
+            <button type="button" class="menu-btn" aria-controls="menu-movil" aria-expanded="false" aria-label="Abrir menú"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+            <nav class="mobile-menu" id="menu-movil" aria-label="Menú">
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="catalogo.html" aria-current="page">Inmuebles</a></li>
                     <li><a href="favoritos.html">Favoritos</a></li>
                     <li><a href="mi-cuenta.html">Mi cuenta</a></li>
+                    <li><a href="mailto:contacto@tuinmueblesuroeste.co">Contacto</a></li>
                 </ul>
+                <div class="menu-actions">
+                    <a class="btn btn-outline" href="login.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Ingresar</a>
+                    <a class="btn btn-primary" href="publicar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/></svg>Publicar</a>
+                </div>
             </nav>
-            <div class="header-actions">
-                <a class="icon-link" href="favoritos.html" aria-label="Favoritos">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.1 0 3.6 1.2 5.2 3 1.6-1.8 3.1-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z"/></svg>
-                    <span class="fav-count" hidden>0</span>
-                </a>
-                <a class="icon-link" href="login.html" aria-label="Ingresar o crear cuenta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></a>
-                <a class="btn btn-primary" href="publicar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Publicar inmueble</a>
-                <button type="button" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
-            </div>
         </div>
     </header>
 
     <main id="contenido">
-        <section class="page-title">
+        <section class="page-head" aria-labelledby="titulo-catalogo">
             <div class="container">
-                <nav class="breadcrumb" aria-label="Ruta de navegación">
-                    <ol>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li aria-current="page">Inmuebles</li>
-                    </ol>
-                </nav>
-                <h1>Inmuebles en el Suroeste Antioqueño</h1>
+                <nav class="crumb" aria-label="Ruta de navegación"><a href="index.html">Inicio</a> / <span aria-current="page">Inmuebles</span></nav>
+                <h1 class="title-40" id="titulo-catalogo">Inmuebles disponibles</h1>
+                <form class="top-search" id="form-busqueda" role="search">
+                    <div class="field">
+                        <label for="buscar-catalogo">Buscar</label>
+                        <input class="control" type="search" id="buscar-catalogo" placeholder="Buscar por municipio, sector o palabra clave" data-ph-mobile="Municipio, sector…">
+                    </div>
+                    <button type="submit" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>Buscar</button>
+                    <button type="button" class="btn btn-secondary btn-filters only-mobile" id="btn-filtros" aria-controls="panel-filtros" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 4h-7M10 4H3M21 12h-9M8 12H3M21 20h-5M12 20H3M14 2v4M8 10v4M16 18v4"/></svg>Filtros</button>
+                </form>
+                <div class="active-filters only-mobile" id="filtros-activos" aria-label="Filtros activos" hidden></div>
             </div>
         </section>
 
-        <div class="container catalog-layout">
-            <aside class="filters" data-collapsed="true" aria-labelledby="titulo-filtros">
-                <h2 id="titulo-filtros">Filtros</h2>
-                <button type="button" class="btn btn-outline btn-block filters-toggle" aria-expanded="false" aria-controls="form-filtros">Mostrar filtros</button>
+        <div class="container catalog">
+            <aside class="filters" id="panel-filtros" aria-labelledby="titulo-filtros">
                 <form id="form-filtros">
-                    <div class="form-field">
-                        <label for="f-municipio">Municipio</label>
-                        <select id="f-municipio" name="municipio">
-                            <option value="">Todos los municipios</option>
-                            <option value="Andes">Andes</option>
-                            <option value="Betania">Betania</option>
-                            <option value="Ciudad Bolívar">Ciudad Bolívar</option>
-                            <option value="Hispania">Hispania</option>
-                            <option value="Jardín">Jardín</option>
-                            <option value="Jericó">Jericó</option>
-                            <option value="Támesis">Támesis</option>
-                        </select>
+                    <div class="filters-head">
+                        <h2 id="titulo-filtros"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 4h-7M10 4H3M21 12h-9M8 12H3M21 20h-5M12 20H3M14 2v4M8 10v4M16 18v4"/></svg>Filtros</h2>
+                        <button type="button" class="btn-link" id="limpiar-filtros">Limpiar</button>
+                        <button type="button" class="btn btn-ghost filters-close only-mobile" aria-label="Cerrar filtros"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
                     </div>
-                    <div class="form-field">
-                        <label for="f-operacion">Operación</label>
-                        <select id="f-operacion" name="operacion">
-                            <option value="">Venta o arriendo</option>
-                            <option value="venta">Venta</option>
-                            <option value="arriendo">Arriendo</option>
-                        </select>
-                    </div>
-                    <div class="form-field">
-                        <label for="f-tipo">Tipo de inmueble</label>
-                        <select id="f-tipo" name="tipo">
-                            <option value="">Todos los tipos</option>
-                            <option value="casa">Casa</option>
-                            <option value="apartamento">Apartamento</option>
-                            <option value="finca">Finca</option>
-                            <option value="lote">Lote</option>
-                            <option value="local">Local</option>
-                        </select>
-                    </div>
-                    <div class="form-field">
-                        <label for="f-precio">Precio máximo (COP)</label>
-                        <input type="number" id="f-precio" name="precio_max" min="0" step="100000" placeholder="Ej. 500000000">
-                    </div>
-                    <div class="form-field">
-                        <label for="f-habitaciones">Habitaciones mínimas</label>
-                        <select id="f-habitaciones" name="habitaciones">
-                            <option value="">Cualquiera</option>
-                            <option value="1">1 o más</option>
-                            <option value="2">2 o más</option>
-                            <option value="3">3 o más</option>
-                            <option value="4">4 o más</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Aplicar filtros</button>
-                    <button type="reset" class="btn btn-outline btn-block" style="margin-top:8px">Limpiar</button>
+                    <fieldset class="filter-group">
+                        <legend>OPERACIÓN</legend>
+                        <label class="check"><input type="checkbox" name="operacion" value="venta"><span class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Comprar</label>
+                        <label class="check"><input type="checkbox" name="operacion" value="arriendo"><span class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Arrendar</label>
+                    </fieldset>
+                    <fieldset class="filter-group">
+                        <legend>TIPO DE INMUEBLE</legend>
+                        <label class="check"><input type="checkbox" name="tipo" value="casa"><span class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Casa</label>
+                        <label class="check"><input type="checkbox" name="tipo" value="apartamento"><span class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Apartamento</label>
+                        <label class="check"><input type="checkbox" name="tipo" value="terreno"><span class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Terreno</label>
+                        <label class="check"><input type="checkbox" name="tipo" value="local"><span class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Local</label>
+                    </fieldset>
+                    <fieldset class="filter-group">
+                        <legend>UBICACIÓN</legend>
+                        <div class="field">
+                            <label for="f-municipio">Municipio</label>
+                            <select class="control" id="f-municipio" name="municipio"><option value="">Todos los municipios</option><option value="Jardín">Jardín</option><option value="Jericó">Jericó</option><option value="Andes">Andes</option><option value="Ciudad Bolívar">Ciudad Bolívar</option><option value="Hispania">Hispania</option><option value="Fredonia">Fredonia</option><option value="Támesis">Támesis</option></select>
+                        </div>
+                        <div class="field">
+                            <label for="f-sector">Sector</label>
+                            <select class="control" id="f-sector" name="sector"><option value="">Todos los sectores</option><option value="urbano">Zona urbana</option><option value="rural">Zona rural</option></select>
+                        </div>
+                    </fieldset>
+                    <fieldset class="filter-group">
+                        <legend>PRECIO (COP)</legend>
+                        <div class="range">
+                            <div class="field">
+                                <label for="f-min">Mínimo</label>
+                                <input class="control" type="number" id="f-min" name="precio_min" min="0" step="1000000" placeholder="$100.000.000">
+                            </div>
+                            <div class="field">
+                                <label for="f-max">Máximo</label>
+                                <input class="control" type="number" id="f-max" name="precio_max" min="0" step="1000000" placeholder="$600.000.000">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="filter-group">
+                        <legend>CARACTERÍSTICAS</legend>
+                        <div class="field">
+                            <label for="f-hab">Habitaciones</label>
+                            <select class="control" id="f-hab" name="habitaciones"><option value="">Cualquiera</option><option value="1">1 o más</option><option value="2">2 o más</option><option value="3">3 o más</option><option value="4">4 o más</option></select>
+                        </div>
+                        <div class="field">
+                            <label for="f-banos">Baños</label>
+                            <select class="control" id="f-banos" name="banos"><option value="">Cualquiera</option><option value="1">1 o más</option><option value="2">2 o más</option><option value="3">3 o más</option></select>
+                        </div>
+                        <label class="check"><input type="checkbox" name="parqueadero" value="si"><span class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Con parqueadero</label>
+                    </fieldset>
+                    <button type="submit" class="btn btn-secondary btn-block">Aplicar filtros</button>
                 </form>
             </aside>
 
-            <section aria-labelledby="titulo-resultados">
-                <h2 id="titulo-resultados" class="visually-hidden">Resultados</h2>
+            <section class="results" aria-labelledby="titulo-resultados">
+                <h2 class="visually-hidden" id="titulo-resultados">Resultados</h2>
                 <div class="results-bar">
-                    <p id="total-resultados" aria-live="polite">Cargando inmuebles…</p>
-                    <div class="form-field" style="margin:0">
-                        <label for="orden" class="visually-hidden">Ordenar resultados</label>
-                        <select id="orden">
-                            <option value="">Más recientes</option>
-                            <option value="precio-asc">Precio: menor a mayor</option>
-                            <option value="precio-desc">Precio: mayor a menor</option>
-                        </select>
+                    <p class="only-desktop" id="total-resultados" aria-live="polite"></p>
+                    <p class="only-mobile text-2" id="total-movil"></p>
+                    <div class="sort">
+                        <label for="orden">Ordenar por:</label>
+                        <select class="control" id="orden"><option value="">Más recientes</option><option value="menor">Menor precio</option><option value="mayor">Mayor precio</option></select>
                     </div>
                 </div>
-                <div class="grid-cards" id="resultados"></div>
-                <div class="empty-state" id="sin-resultados" hidden>
-                    <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
-                    <h3>No encontramos inmuebles con esos filtros</h3>
-                    <p class="text-secondary">Prueba con otro municipio o un precio máximo mayor.</p>
-                    <button type="reset" form="form-filtros" class="btn btn-secondary">Limpiar filtros</button>
+                <div class="chips" role="group" aria-label="Ordenar">
+                    <button type="button" class="chip" data-orden="" aria-pressed="true">Más recientes</button>
+                    <button type="button" class="chip" data-orden="menor" aria-pressed="false">Menor precio</button>
+                    <button type="button" class="chip" data-orden="mayor" aria-pressed="false">Mayor precio</button>
                 </div>
+                <div class="grid-3" id="resultados"></div>
+                <div class="empty-state" id="sin-resultados" hidden>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    <h2>No encontramos inmuebles con esos filtros.</h2>
+                    <p>Prueba con otro municipio o amplía el rango de precio.</p>
+                    <button type="button" class="btn btn-primary" data-reset-filtros>Limpiar filtros</button>
+                </div>
+                <nav class="pagination" id="paginacion" aria-label="Paginación"></nav>
             </section>
         </div>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer" id="contacto">
         <div class="container">
-            <div class="footer-grid">
-                <section>
-                    <a class="brand" href="index.html">
-                <img src="assets/img/logo.jpg" alt="" width="44" height="44">
-                <span>Tu Inmueble <small>Suroeste</small></span>
-            </a>
-                    <p>Plataforma inmobiliaria para comprar, vender y arrendar casas, apartamentos, fincas, lotes y locales en el Suroeste Antioqueño.</p>
-                </section>
-                <nav aria-label="Navegación del pie de página">
-                    <h2>Navegación</h2>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="catalogo.html">Inmuebles</a></li>
-                        <li><a href="favoritos.html">Favoritos</a></li>
-                        <li><a href="publicar.html">Publicar inmueble</a></li>
-                    </ul>
-                </nav>
-                <section>
-                    <h2>Municipios</h2>
-                    <ul>
-                        <li><a href="catalogo.html?municipio=Andes">Andes</a></li>
-                        <li><a href="catalogo.html?municipio=Jard%C3%ADn">Jardín</a></li>
-                        <li><a href="catalogo.html?municipio=Jeric%C3%B3">Jericó</a></li>
-                        <li><a href="catalogo.html?municipio=Ciudad%20Bol%C3%ADvar">Ciudad Bolívar</a></li>
-                    </ul>
-                </section>
-                <section>
-                    <h2>Contacto</h2>
-                    <ul>
-                        <li>Andes, Antioquia</li>
-                        <li><a href="mailto:contacto@tuinmueblesuroeste.co">contacto@tuinmueblesuroeste.co</a></li>
-                        <li><a href="tel:+576048410000">(604) 841 0000</a></li>
-                    </ul>
-                </section>
+            <div class="footer-brand">
+                <a class="logo-box" href="index.html"><img src="assets/img/logo.jpg" alt="Tu Inmueble Suroeste" width="124" height="60"></a>
+                <p>Plataforma inmobiliaria del Suroeste Antioqueño.<br>Compra, vende o arrienda con confianza.</p>
             </div>
-            <p class="footer-bottom">© <span data-year>2026</span> Tu Inmueble Suroeste · Proyecto formativo SENA – Análisis y Desarrollo de Software.</p>
+            <nav class="footer-col" aria-labelledby="f-nav">
+                <h2 id="f-nav">Navegación</h2>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Inmuebles</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <section class="footer-col" aria-labelledby="f-mun">
+                <h2 id="f-mun">Municipios</h2>
+                <ul>
+                    <li>Jardín · Jericó · Andes</li>
+                    <li>Ciudad Bolívar · Hispania</li>
+                    <li>Fredonia · Támesis</li>
+                </ul>
+            </section>
+            <section class="footer-col" aria-labelledby="f-con">
+                <h2 id="f-con">Contacto</h2>
+                <ul>
+                    <li><a href="mailto:contacto@tuinmueblesuroeste.co">contacto@tuinmueblesuroeste.co</a></li>
+                    <li><a href="tel:+573000000000">+57 300 000 0000</a></li>
+                    <li>Suroeste Antioqueño, Colombia</li>
+                </ul>
+            </section>
         </div>
     </footer>
 
-    <nav class="bottom-nav" aria-label="Navegación móvil">
+    <nav class="bottom-nav" aria-label="Navegación inferior">
         <ul>
-            <li><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>Inicio</a></li>
-            <li><a href="catalogo.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Buscar</a></li>
-            <li><a href="favoritos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.1 0 3.6 1.2 5.2 3 1.6-1.8 3.1-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z"/></svg>Favoritos</a></li>
-            <li><a href="mi-cuenta.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Mi cuenta</a></li>
+            <li><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></svg>Inicio</a></li>
+            <li><a href="catalogo.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>Buscar</a></li>
+            <li><a href="favoritos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>Favoritos</a></li>
+            <li><a href="mi-cuenta.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Mi cuenta</a></li>
         </ul>
     </nav>
 

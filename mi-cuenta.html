@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi cuenta | Tu Inmueble Suroeste</title>
-    <meta name="description" content="Solicitudes, contratos y pagos del usuario.">
+    <meta name="description" content="Perfil, solicitudes, contratos y pagos del usuario.">
     <link rel="icon" href="assets/img/logo.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,167 +12,190 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body data-page="" data-base="">
+<body data-page="cuenta" class="bg-gray">
 
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <header class="site-header">
         <div class="container">
-            <a class="brand" href="index.html">
-                <img src="assets/img/logo.jpg" alt="" width="44" height="44">
-                <span>Tu Inmueble <small>Suroeste</small></span>
-            </a>
-            <nav class="main-nav" id="menu-principal" aria-label="Navegación principal">
+            <a class="logo" href="index.html"><img src="assets/img/logo.jpg" alt="Tu Inmueble Suroeste - Inicio" width="124" height="60"></a>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Inmuebles</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a class="btn btn-ghost" href="favoritos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>Favoritos</a>
+                <a class="btn btn-outline" href="login.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Ingresar</a>
+                <a class="btn btn-primary" href="publicar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/></svg>Publicar inmueble</a>
+            </div>
+            <button type="button" class="menu-btn" aria-controls="menu-movil" aria-expanded="false" aria-label="Abrir menú"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+            <nav class="mobile-menu" id="menu-movil" aria-label="Menú">
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="catalogo.html">Inmuebles</a></li>
                     <li><a href="favoritos.html">Favoritos</a></li>
                     <li><a href="mi-cuenta.html" aria-current="page">Mi cuenta</a></li>
+                    <li><a href="mailto:contacto@tuinmueblesuroeste.co">Contacto</a></li>
                 </ul>
+                <div class="menu-actions">
+                    <a class="btn btn-outline" href="login.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Ingresar</a>
+                    <a class="btn btn-primary" href="publicar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/></svg>Publicar</a>
+                </div>
             </nav>
-            <div class="header-actions">
-                <a class="icon-link" href="favoritos.html" aria-label="Favoritos">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.1 0 3.6 1.2 5.2 3 1.6-1.8 3.1-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z"/></svg>
-                    <span class="fav-count" hidden>0</span>
-                </a>
-                <a class="icon-link" href="login.html" aria-label="Ingresar o crear cuenta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></a>
-                <a class="btn btn-primary" href="publicar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Publicar inmueble</a>
-                <button type="button" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
-            </div>
         </div>
     </header>
 
-    <main id="contenido">
-        <div class="layout-sidebar">
-            <aside class="sidebar" aria-label="Menú de Mi cuenta">
-                <div class="sidebar-user">
-                    <span class="avatar" aria-hidden="true">OM</span>
-                    <p>Ometh Martinez<small>Cliente</small></p>
-                </div>
-                <nav aria-label="Secciones de Mi cuenta">
-                    <ul>
-                        <li><a href="mi-cuenta.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg> Resumen</a></li>
-                        <li><a href="#solicitudes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M4 13h5l1 3h4l1-3h5"/></svg> Mis solicitudes</a></li>
-                        <li><a href="#contratos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6v18h12V7z"/><path d="M14 3v4h4M9 13h6M9 17h6"/></svg> Mis contratos</a></li>
-                        <li><a href="#pagos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg> Mis pagos</a></li>
-                        <li><a href="favoritos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.1 0 3.6 1.2 5.2 3 1.6-1.8 3.1-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z"/></svg> Favoritos</a></li>
-                        <li><a href="publicar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Publicar inmueble</a></li>
-                        <li><a href="index.html" data-confirm="¿Deseas cerrar la sesión?"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5V3h4M16 17l5-5-5-5M21 12H9"/></svg> Cerrar sesión</a></li>
-                    </ul>
-                </nav>
-            </aside>
-            <div class="content">
-                <div class="content-head">
-                    <div>
-                        <h1>Hola, Ometh</h1>
-                        <p class="text-secondary" style="margin:0">Este es el resumen de tu actividad.</p>
-                    </div>
-                    <a class="btn btn-primary" href="publicar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Publicar inmueble</a>
-                </div>
-
-                <section class="stats" aria-label="Resumen">
-                    <article class="stat"><h2>Solicitudes</h2><p>3</p></article>
-                    <article class="stat"><h2>Contratos activos</h2><p>1</p></article>
-                    <article class="stat"><h2>Próximo pago</h2><p>$ 1.600.000</p></article>
-                    <article class="stat"><h2>Favoritos</h2><p><span class="fav-count-text">—</span></p></article>
-                </section>
-
-                <section id="solicitudes" aria-labelledby="t-solicitudes">
-                    <h2 id="t-solicitudes">Mis solicitudes</h2>
-                    <div class="table-wrap">
-                        <table>
-                            <thead>
-                                <tr><th scope="col">Código</th><th scope="col">Inmueble</th><th scope="col">Municipio</th><th scope="col">Fecha</th><th scope="col">Estado</th></tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>SOL-014</td><td><a href="detalle.html?id=2">Apartamento moderno cerca al parque</a></td><td>Andes</td><td>02/10/2026</td><td><span class="badge badge-ok">Aprobada</span></td></tr>
-                                <tr><td>SOL-021</td><td><a href="detalle.html?id=1">Casa campestre con vista a la montaña</a></td><td>Jardín</td><td>12/10/2026</td><td><span class="badge badge-warn">Pendiente</span></td></tr>
-                                <tr><td>SOL-009</td><td><a href="detalle.html?id=4">Casa colonial en el centro histórico</a></td><td>Jericó</td><td>18/09/2026</td><td><span class="badge badge-danger">Rechazada</span></td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-
-                <section id="contratos" aria-labelledby="t-contratos">
-                    <h2 id="t-contratos">Mis contratos</h2>
-                    <div class="table-wrap">
-                        <table>
-                            <thead>
-                                <tr><th scope="col">Contrato</th><th scope="col">Inmueble</th><th scope="col">Tipo</th><th scope="col">Inicio</th><th scope="col">Fin</th><th scope="col">Valor</th><th scope="col">Estado</th></tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>CON-005</td><td>Apartamento moderno cerca al parque</td><td>Arriendo</td><td>01/09/2026</td><td>31/08/2027</td><td>$ 1.600.000 COP / mes</td><td><span class="badge badge-ok">Activo</span></td></tr>
-                                <tr><td>CON-002</td><td>Apartaestudio amoblado</td><td>Arriendo</td><td>01/02/2026</td><td>31/07/2026</td><td>$ 950.000 COP / mes</td><td><span class="badge badge-muted">Finalizado</span></td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-
-                <section id="pagos" aria-labelledby="t-pagos">
-                    <h2 id="t-pagos">Mis pagos</h2>
-                    <div class="table-wrap">
-                        <table>
-                            <thead>
-                                <tr><th scope="col">Referencia</th><th scope="col">Contrato</th><th scope="col">Fecha</th><th scope="col">Método</th><th scope="col">Valor</th><th scope="col">Estado</th></tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>PAG-103</td><td>CON-005</td><td>05/11/2026</td><td>PSE</td><td>$ 1.600.000 COP</td><td><span class="badge badge-warn">Pendiente</span></td></tr>
-                                <tr><td>PAG-097</td><td>CON-005</td><td>05/10/2026</td><td>PSE</td><td>$ 1.600.000 COP</td><td><span class="badge badge-ok">Pagado</span></td></tr>
-                                <tr><td>PAG-090</td><td>CON-005</td><td>05/09/2026</td><td>Transferencia</td><td>$ 1.600.000 COP</td><td><span class="badge badge-ok">Pagado</span></td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-            </div>
+    <section class="profile-band" aria-label="Perfil">
+        <span class="avatar" aria-hidden="true">OM</span>
+        <div>
+            <strong data-nombre>Ometh Martinez Potes</strong>
+            <span>ometh.martinez@correo.com</span>
+            <span>300 000 0000</span>
         </div>
-    </main>
+    </section>
 
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <section>
-                    <a class="brand" href="index.html">
-                <img src="assets/img/logo.jpg" alt="" width="44" height="44">
-                <span>Tu Inmueble <small>Suroeste</small></span>
-            </a>
-                    <p>Plataforma inmobiliaria para comprar, vender y arrendar casas, apartamentos, fincas, lotes y locales en el Suroeste Antioqueño.</p>
-                </section>
-                <nav aria-label="Navegación del pie de página">
-                    <h2>Navegación</h2>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="catalogo.html">Inmuebles</a></li>
-                        <li><a href="favoritos.html">Favoritos</a></li>
-                        <li><a href="publicar.html">Publicar inmueble</a></li>
-                    </ul>
-                </nav>
-                <section>
-                    <h2>Municipios</h2>
-                    <ul>
-                        <li><a href="catalogo.html?municipio=Andes">Andes</a></li>
-                        <li><a href="catalogo.html?municipio=Jard%C3%ADn">Jardín</a></li>
-                        <li><a href="catalogo.html?municipio=Jeric%C3%B3">Jericó</a></li>
-                        <li><a href="catalogo.html?municipio=Ciudad%20Bol%C3%ADvar">Ciudad Bolívar</a></li>
-                    </ul>
-                </section>
-                <section>
-                    <h2>Contacto</h2>
-                    <ul>
-                        <li>Andes, Antioquia</li>
-                        <li><a href="mailto:contacto@tuinmueblesuroeste.co">contacto@tuinmueblesuroeste.co</a></li>
-                        <li><a href="tel:+576048410000">(604) 841 0000</a></li>
-                    </ul>
-                </section>
+    <div class="container account">
+        <aside class="account-side" aria-label="Menú de Mi cuenta">
+            <div class="user-row">
+                <span class="avatar" aria-hidden="true">OM</span>
+                <div><strong>Ometh Martinez</strong><span>Usuario registrado</span></div>
             </div>
-            <p class="footer-bottom">© <span data-year>2026</span> Tu Inmueble Suroeste · Proyecto formativo SENA – Análisis y Desarrollo de Software.</p>
+            <ul class="side-menu">
+                <li><a href="#perfil" data-seccion="perfil" aria-current="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Mi perfil</a></li>
+                <li><a href="favoritos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>Favoritos</a></li>
+                <li><a href="#solicitudes" data-seccion="solicitudes" aria-current="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11Z"/></svg>Solicitudes</a></li>
+                <li><a href="#contratos" data-seccion="contratos" aria-current="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M10 9H8M16 13H8M16 17H8"/></svg>Contratos</a></li>
+                <li><a href="#pagos" data-seccion="pagos" aria-current="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>Pagos</a></li>
+                <li><a href="publicar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/></svg>Publicar inmueble</a></li>
+                <li class="sep" role="separator"></li>
+                <li><a class="logout" href="index.html" data-confirm="¿Deseas cerrar la sesión?" data-ok-text="Cerrar sesión"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>Cerrar sesión</a></li>
+            </ul>
+        </aside>
+
+        <main id="contenido" class="account-main">
+            <div class="head-row">
+                <div class="heading">
+                    <h1 class="title-40">Mi cuenta</h1>
+                    <p class="text-2">Gestiona tu perfil, solicitudes, contratos y pagos.</p>
+                </div>
+                <a class="btn btn-primary" href="publicar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/></svg>Publicar inmueble</a>
+            </div>
+
+            <button type="button" class="btn btn-outline btn-block only-mobile" id="editar-perfil-movil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.4 2.6a2.1 2.1 0 0 1 3 3L12 15l-4 1 1-4Z"/></svg>Editar información</button>
+            <nav class="modules" aria-label="Accesos de Mi cuenta">
+                <a href="favoritos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>Favoritos</a>
+                <a href="#solicitudes" data-seccion="solicitudes" aria-current="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11Z"/></svg>Solicitudes</a>
+                <a href="#contratos" data-seccion="contratos" aria-current="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M10 9H8M16 13H8M16 17H8"/></svg>Contratos</a>
+                <a href="#pagos" data-seccion="pagos" aria-current="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>Pagos</a>
+                <a href="publicar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/></svg>Publicar</a>
+            </nav>
+
+            <section class="stats" aria-label="Resumen">
+                <article class="stat"><span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span><div><strong data-fav-count>4</strong><span>Favoritos guardados</span></div></article>
+                <article class="stat"><span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11Z"/></svg></span><div><strong>3</strong><span>Solicitudes</span></div></article>
+                <article class="stat"><span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M10 9H8M16 13H8M16 17H8"/></svg></span><div><strong>2</strong><span>Contratos</span></div></article>
+                <article class="stat"><span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></span><div><strong>1</strong><span>Pago pendiente</span></div></article>
+            </section>
+
+            <section class="panel" id="perfil" aria-labelledby="t-perfil">
+                <h2 class="panel-title" id="t-perfil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Mi perfil</h2>
+                <div class="profile-row">
+                    <div class="field"><label for="c-nombre">Nombre</label><input class="control" id="c-nombre" value="Ometh Martinez Potes" autocomplete="name" readonly></div>
+                    <div class="field"><label for="c-correo">Correo</label><input class="control" type="email" id="c-correo" value="ometh.martinez@correo.com" autocomplete="email" readonly></div>
+                    <div class="field"><label for="c-telefono">Teléfono</label><input class="control" type="tel" id="c-telefono" value="300 000 0000" autocomplete="tel" readonly></div>
+                    <button type="button" class="btn btn-outline" id="editar-perfil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.4 2.6a2.1 2.1 0 0 1 3 3L12 15l-4 1 1-4Z"/></svg><span>Editar información</span></button>
+                </div>
+            </section>
+
+            <section class="panel" id="solicitudes" aria-labelledby="t-solicitudes">
+                <h2 class="panel-title" id="t-solicitudes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11Z"/></svg>Solicitudes</h2>
+                <div class="table-wrap table-list">
+                    <table>
+                        <thead><tr><th scope="col">INMUEBLE</th><th scope="col">FECHA</th><th scope="col">ESTADO</th><th scope="col">ACCIÓN</th></tr></thead>
+                        <tbody>
+                            <tr><td class="strong">Casa moderna con piscina · Jardín</td><td>08/10/2026</td><td class="badge-cell"><span class="badge badge-warning">Pendiente</span></td><td class="action-cell"><a class="link-gold" href="detalle.html?id=1">Ver inmueble <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></td></tr>
+                            <tr><td class="strong">Apartamento céntrico · Andes</td><td>01/10/2026</td><td class="badge-cell"><span class="badge badge-info">Contactado</span></td><td class="action-cell"><a class="link-gold" href="detalle.html?id=2">Ver inmueble <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></td></tr>
+                            <tr><td class="strong">Finca cafetera tradicional · Támesis</td><td>15/09/2026</td><td class="badge-cell"><span class="badge badge-success">Finalizado</span></td><td class="action-cell"><a class="link-gold" href="detalle.html?id=6">Ver inmueble <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="panel" id="contratos" aria-labelledby="t-contratos">
+                <h2 class="panel-title" id="t-contratos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M10 9H8M16 13H8M16 17H8"/></svg>Contratos</h2>
+                <div class="table-wrap table-list">
+                    <table>
+                        <thead><tr><th scope="col">INMUEBLE</th><th scope="col">FECHA INICIO</th><th scope="col">FECHA FIN</th><th scope="col">ESTADO</th><th scope="col">ACCIÓN</th></tr></thead>
+                        <tbody>
+                            <tr><td class="strong">Apartamento céntrico · Andes</td><td>01/11/2026</td><td class="joined">31/10/2027</td><td class="badge-cell"><span class="badge badge-success">Activo</span></td><td class="action-cell"><a class="link-gold" href="#" data-toast="El documento del contrato estará disponible cuando se conecte el backend.">Ver contrato <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></td></tr>
+                            <tr><td class="strong">Apartaestudio amoblado · Fredonia</td><td>01/02/2025</td><td class="joined">31/01/2026</td><td class="badge-cell"><span class="badge badge-muted">Vencido</span></td><td class="action-cell"><a class="link-gold" href="#" data-toast="El documento del contrato estará disponible cuando se conecte el backend.">Ver contrato <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <a class="link-gold only-mobile" href="#" data-toast="El documento del contrato estará disponible cuando se conecte el backend.">Ver contrato <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </section>
+
+            <section class="panel" id="pagos" aria-labelledby="t-pagos">
+                <h2 class="panel-title" id="t-pagos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>Pagos</h2>
+                <div class="table-wrap table-list">
+                    <table>
+                        <thead><tr><th scope="col">CONCEPTO</th><th scope="col">FECHA</th><th scope="col">VALOR COP</th><th scope="col">ESTADO</th></tr></thead>
+                        <tbody>
+                            <tr><td class="strong">Canon de arriendo · Octubre 2026</td><td>05/10/2026</td><td class="dot">$1.800.000 COP</td><td class="badge-cell"><span class="badge badge-success">Pagado</span></td></tr>
+                            <tr><td class="strong">Canon de arriendo · Noviembre 2026</td><td>05/11/2026</td><td class="dot">$1.800.000 COP</td><td class="badge-cell"><span class="badge badge-warning">Pendiente</span></td></tr>
+                            <tr><td class="strong">Depósito / garantía · Apartamento Andes</td><td>28/09/2026</td><td class="dot">$1.800.000 COP</td><td class="badge-cell"><span class="badge badge-success">Pagado</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <a class="btn btn-danger-outline btn-block only-mobile" href="index.html" data-confirm="¿Deseas cerrar la sesión?" data-ok-text="Cerrar sesión"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>Cerrar sesión</a>
+        </main>
+    </div>
+
+    <footer class="site-footer" id="contacto">
+        <div class="container">
+            <div class="footer-brand">
+                <a class="logo-box" href="index.html"><img src="assets/img/logo.jpg" alt="Tu Inmueble Suroeste" width="124" height="60"></a>
+                <p>Plataforma inmobiliaria del Suroeste Antioqueño.<br>Compra, vende o arrienda con confianza.</p>
+            </div>
+            <nav class="footer-col" aria-labelledby="f-nav">
+                <h2 id="f-nav">Navegación</h2>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Inmuebles</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <section class="footer-col" aria-labelledby="f-mun">
+                <h2 id="f-mun">Municipios</h2>
+                <ul>
+                    <li>Jardín · Jericó · Andes</li>
+                    <li>Ciudad Bolívar · Hispania</li>
+                    <li>Fredonia · Támesis</li>
+                </ul>
+            </section>
+            <section class="footer-col" aria-labelledby="f-con">
+                <h2 id="f-con">Contacto</h2>
+                <ul>
+                    <li><a href="mailto:contacto@tuinmueblesuroeste.co">contacto@tuinmueblesuroeste.co</a></li>
+                    <li><a href="tel:+573000000000">+57 300 000 0000</a></li>
+                    <li>Suroeste Antioqueño, Colombia</li>
+                </ul>
+            </section>
         </div>
     </footer>
 
-    <nav class="bottom-nav" aria-label="Navegación móvil">
+    <nav class="bottom-nav" aria-label="Navegación inferior">
         <ul>
-            <li><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>Inicio</a></li>
-            <li><a href="catalogo.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Buscar</a></li>
-            <li><a href="favoritos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.1 0 3.6 1.2 5.2 3 1.6-1.8 3.1-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z"/></svg>Favoritos</a></li>
-            <li><a href="mi-cuenta.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Mi cuenta</a></li>
+            <li><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></svg>Inicio</a></li>
+            <li><a href="catalogo.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>Buscar</a></li>
+            <li><a href="favoritos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>Favoritos</a></li>
+            <li><a href="mi-cuenta.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Mi cuenta</a></li>
         </ul>
     </nav>
 
@@ -180,9 +203,9 @@
         <form method="dialog">
             <h2 id="modal-titulo">Confirmar acción</h2>
             <p data-modal-text></p>
-            <div class="form-actions">
+            <div class="modal-actions">
                 <button class="btn btn-outline" value="cancel">Cancelar</button>
-                <button class="btn btn-secondary" value="ok">Confirmar</button>
+                <button class="btn btn-secondary" value="ok" data-modal-ok>Confirmar</button>
             </div>
         </form>
     </dialog>
