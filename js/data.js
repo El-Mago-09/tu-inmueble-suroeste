@@ -1,86 +1,88 @@
 /* ============================================================
    Tu Inmueble Suroeste - Datos de ejemplo del front-end
-   Los campos siguen la tabla "inmuebles" de la base de datos
-   (titulo, descripcion, tipo, operacion, precio, direccion,
-   municipio, estado). Mientras no exista backend, estos datos
-   alimentan las tarjetas, el catálogo, el detalle y favoritos.
+   Inmuebles, textos y fotografías de las pantallas de Figma EV03
+   (D01, D02, D03, D06, M01-M04). Campos según la tabla
+   "inmuebles" de la base de datos del proyecto.
    ============================================================ */
 
-const IMG = (id, w = 900) => `https://images.unsplash.com/${id}?w=${w}&q=70&auto=format&fit=crop`;
+const IMG = (id, w = 900) => `https://images.unsplash.com/photo-${id}?w=${w}&q=70&auto=format&fit=crop`;
 
 const INMUEBLES = [
     {
-        id: 1, titulo: "Casa campestre con vista a la montaña", tipo: "casa", operacion: "venta",
-        precio: 480000000, municipio: "Jardín", direccion: "Vereda La Salada, km 3",
-        estado: "disponible", habitaciones: 4, banos: 3, area: 220, destacado: true,
-        descripcion: "Casa campestre rodeada de cafetales, a diez minutos del parque principal de Jardín. Amplios corredores, chimenea, cocina abierta y zona verde con árboles frutales.",
-        caracteristicas: ["Chimenea", "Parqueadero para 2 vehículos", "Zona verde", "Agua de nacimiento", "Cocina integral", "Vista panorámica"],
-        imagenes: ["photo-1600596542815-ffad4c1539a9", "photo-1600585154340-be6161a56a0c", "photo-1484154218962-a197022b5858"]
+        id: 1, titulo: "Casa moderna con piscina", tipo: "casa", operacion: "venta", precio: 480000000,
+        municipio: "Jardín", sector: "rural", direccion: "Vereda La Herrera", estado: "disponible", nuevo: true,
+        habitaciones: 4, banos: 3, area: 220, parqueaderos: 2, destacado: true,
+        descripcion: "Hermosa casa de dos niveles ubicada a 5 minutos del parque principal de Jardín. Cuenta con amplios espacios iluminados, cocina integral abierta, zona de BBQ, piscina y una vista privilegiada a las montañas del Suroeste Antioqueño. Ideal para vivienda familiar o descanso.",
+        caracteristicas: ["Piscina", "Zona BBQ", "Cocina integral", "Vista a montaña", "Calentador de agua", "Patio y jardín", "Vía pavimentada", "Cerca al parque"],
+        imagenes: ["1600596542815-ffad4c1539a9", "1600585154340-be6161a56a0c", "1600607687939-ce8a6c25118c", "1564013799919-ab600027ffc6", "1502672260266-1c1ef2d93688"]
     },
     {
-        id: 2, titulo: "Apartamento moderno cerca al parque", tipo: "apartamento", operacion: "arriendo",
-        precio: 1600000, municipio: "Andes", direccion: "Calle 50 # 49-21, piso 3",
-        estado: "disponible", habitaciones: 3, banos: 2, area: 85, destacado: true,
-        descripcion: "Apartamento iluminado a dos cuadras del parque principal de Andes. Sala-comedor, balcón, cocina integral y zona de ropas independiente.",
-        caracteristicas: ["Balcón", "Cocina integral", "Zona de ropas", "Cerca a transporte", "Portería"],
-        imagenes: ["photo-1502672260266-1c1ef2d93688", "photo-1522708323590-d24dbb6b0267", "photo-1484154218962-a197022b5858"]
+        id: 2, titulo: "Apartamento céntrico", tipo: "apartamento", operacion: "arriendo", precio: 1800000,
+        municipio: "Andes", sector: "urbano", direccion: "Calle 50 # 49-21, piso 3", estado: "reservado",
+        habitaciones: 3, banos: 2, area: 85, parqueaderos: 1, destacado: true,
+        descripcion: "Apartamento iluminado a dos cuadras del parque principal de Andes, con sala-comedor, balcón, cocina integral y zona de ropas independiente. Cerca de comercio, bancos y transporte.",
+        caracteristicas: ["Balcón", "Cocina integral", "Zona de ropas", "Portería", "Cerca al parque", "Calentador de agua"],
+        imagenes: ["1522708323590-d24dbb6b0267", "1502672260266-1c1ef2d93688", "1600585154340-be6161a56a0c", "1600607687939-ce8a6c25118c", "1564013799919-ab600027ffc6"]
     },
     {
-        id: 3, titulo: "Finca cafetera productiva", tipo: "finca", operacion: "venta",
-        precio: 1250000000, municipio: "Ciudad Bolívar", direccion: "Vereda San Gregorio",
-        estado: "disponible", habitaciones: 5, banos: 4, area: 48000, destacado: true,
-        descripcion: "Finca de 4,8 hectáreas con cultivo de café tecnificado, beneficiadero, casa principal y casa de mayordomo. Acceso por vía pavimentada.",
-        caracteristicas: ["Cultivo de café", "Beneficiadero", "Casa de mayordomo", "Vía pavimentada", "Nacimiento de agua"],
-        imagenes: ["photo-1500382017468-9049fed747ef", "photo-1416331108676-a22ccb276e35", "photo-1449844908441-8829872d2607"]
+        id: 3, titulo: "Lote campestre con vista", tipo: "terreno", operacion: "venta", precio: 320000000,
+        municipio: "Jericó", sector: "rural", direccion: "Vereda Cauca, km 4", estado: "disponible",
+        habitaciones: 0, banos: 0, area: 2500, parqueaderos: 0, destacado: true,
+        descripcion: "Lote campestre de 2.500 m² con vista panorámica a las montañas de Jericó, ideal para construir casa de descanso. Cuenta con acceso vehicular y disponibilidad de servicios públicos.",
+        caracteristicas: ["Vista a montaña", "Vía pavimentada", "Agua de nacimiento", "Escrituras al día"],
+        imagenes: ["1500382017468-9049fed747ef", "1568605114967-8130f3a36994", "1600596542815-ffad4c1539a9", "1570129477492-45c003edd2be", "1512917774080-9991f1c4c750"]
     },
     {
-        id: 4, titulo: "Casa colonial en el centro histórico", tipo: "casa", operacion: "venta",
-        precio: 620000000, municipio: "Jericó", direccion: "Carrera 4 # 6-35",
-        estado: "reservado", habitaciones: 5, banos: 3, area: 260, destacado: true,
-        descripcion: "Casa de arquitectura tradicional antioqueña, con patio central, balcones de madera y techos altos, a una cuadra de la catedral de Jericó.",
-        caracteristicas: ["Patio central", "Balcones de madera", "Techos altos", "Ubicación central"],
-        imagenes: ["photo-1568605114967-8130f3a36994", "photo-1570129477492-45c003edd2be", "photo-1600585154340-be6161a56a0c"]
+        id: 4, titulo: "Casa familiar con jardín", tipo: "casa", operacion: "venta", precio: 390000000,
+        municipio: "Ciudad Bolívar", sector: "urbano", direccion: "Barrio El Libertador", estado: "disponible",
+        habitaciones: 3, banos: 2, area: 160, parqueaderos: 1, destacado: true,
+        descripcion: "Casa de una planta en barrio residencial tranquilo de Ciudad Bolívar, con antejardín, patio interior, cocina integral y garaje cubierto. Lista para habitar.",
+        caracteristicas: ["Patio y jardín", "Cocina integral", "Garaje cubierto", "Calentador de agua", "Cerca al parque"],
+        imagenes: ["1568605114967-8130f3a36994", "1570129477492-45c003edd2be", "1564013799919-ab600027ffc6", "1600585154340-be6161a56a0c", "1502672260266-1c1ef2d93688"]
     },
     {
-        id: 5, titulo: "Casa familiar con antejardín", tipo: "casa", operacion: "arriendo",
-        precio: 1900000, municipio: "Támesis", direccion: "Calle 12 # 8-40",
-        estado: "disponible", habitaciones: 3, banos: 2, area: 140,
-        descripcion: "Casa de dos niveles en barrio residencial tranquilo, con antejardín, patio de ropas y garaje cubierto.",
-        caracteristicas: ["Garaje cubierto", "Antejardín", "Patio", "Barrio residencial"],
-        imagenes: ["photo-1570129477492-45c003edd2be", "photo-1564013799919-ab600027ffc6", "photo-1484154218962-a197022b5858"]
+        id: 5, titulo: "Apartaestudio amoblado", tipo: "apartamento", operacion: "arriendo", precio: 1200000,
+        municipio: "Fredonia", sector: "urbano", direccion: "Carrera 50 # 52-10", estado: "arrendado",
+        habitaciones: 1, banos: 1, area: 45, parqueaderos: 0,
+        descripcion: "Apartaestudio amoblado con internet incluido, ideal para profesionales o estudiantes. Ubicado cerca de la plaza principal de Fredonia.",
+        caracteristicas: ["Amoblado", "Internet incluido", "Cocina integral", "Portería"],
+        imagenes: ["1502672260266-1c1ef2d93688", "1522708323590-d24dbb6b0267", "1600607687939-ce8a6c25118c", "1600585154340-be6161a56a0c", "1564013799919-ab600027ffc6"]
     },
     {
-        id: 6, titulo: "Lote urbanizable plano", tipo: "lote", operacion: "venta",
-        precio: 180000000, municipio: "Hispania", direccion: "Salida a Betania",
-        estado: "disponible", habitaciones: 0, banos: 0, area: 1200,
-        descripcion: "Lote plano con servicios públicos disponibles, ideal para proyecto de vivienda o bodega. Escrituras al día.",
-        caracteristicas: ["Servicios públicos", "Terreno plano", "Escrituras al día", "Fácil acceso"],
-        imagenes: ["photo-1449844908441-8829872d2607", "photo-1500382017468-9049fed747ef", "photo-1416331108676-a22ccb276e35"]
+        id: 6, titulo: "Finca cafetera tradicional", tipo: "casa", operacion: "venta", precio: 950000000,
+        municipio: "Támesis", sector: "rural", direccion: "Vereda San Antonio", estado: "disponible",
+        habitaciones: 5, banos: 4, area: 30000, parqueaderos: 3,
+        descripcion: "Finca de 3 hectáreas con cultivo de café, casa principal de estilo tradicional antioqueño, beneficiadero y casa de mayordomo. Acceso por vía en buen estado.",
+        caracteristicas: ["Cultivo de café", "Beneficiadero", "Casa de mayordomo", "Vista a montaña", "Agua de nacimiento"],
+        imagenes: ["1512917774080-9991f1c4c750", "1500382017468-9049fed747ef", "1568605114967-8130f3a36994", "1600596542815-ffad4c1539a9", "1570129477492-45c003edd2be"]
     },
     {
-        id: 7, titulo: "Apartaestudio amoblado", tipo: "apartamento", operacion: "arriendo",
-        precio: 950000, municipio: "Jardín", direccion: "Calle 9 # 3-15",
-        estado: "arrendado", habitaciones: 1, banos: 1, area: 42,
-        descripcion: "Apartaestudio amoblado con internet incluido, ideal para estudiantes o turismo de larga estancia.",
-        caracteristicas: ["Amoblado", "Internet incluido", "Servicios incluidos"],
-        imagenes: ["photo-1522708323590-d24dbb6b0267", "photo-1502672260266-1c1ef2d93688", "photo-1484154218962-a197022b5858"]
+        id: 7, titulo: "Casa en arriendo cerca al parque", tipo: "casa", operacion: "arriendo", precio: 2500000,
+        municipio: "Hispania", sector: "urbano", direccion: "Calle 12 # 8-40", estado: "disponible",
+        habitaciones: 3, banos: 2, area: 140, parqueaderos: 1,
+        descripcion: "Casa de dos niveles a una cuadra del parque principal de Hispania, con patio, zona de ropas y garaje. Ideal para familia.",
+        caracteristicas: ["Cerca al parque", "Patio y jardín", "Garaje cubierto", "Zona de ropas"],
+        imagenes: ["1570129477492-45c003edd2be", "1564013799919-ab600027ffc6", "1568605114967-8130f3a36994", "1600585154340-be6161a56a0c", "1502672260266-1c1ef2d93688"]
     },
     {
-        id: 8, titulo: "Casa moderna con piscina", tipo: "casa", operacion: "venta",
-        precio: 890000000, municipio: "Betania", direccion: "Condominio El Mirador, casa 7",
-        estado: "disponible", habitaciones: 4, banos: 4, area: 310,
-        descripcion: "Casa contemporánea en condominio cerrado, con piscina, terraza BBQ y amplios ventanales hacia el valle.",
-        caracteristicas: ["Piscina", "Terraza BBQ", "Condominio cerrado", "Vigilancia 24 horas", "Parqueadero doble"],
-        imagenes: ["photo-1613490493576-7fde63acd811", "photo-1580587771525-78b9dba3b914", "photo-1600596542815-ffad4c1539a9"]
+        id: 8, titulo: "Casa colonial restaurada", tipo: "casa", operacion: "venta", precio: 410000000,
+        municipio: "Jericó", sector: "urbano", direccion: "Carrera 4 # 6-35", estado: "disponible",
+        habitaciones: 4, banos: 3, area: 190, parqueaderos: 0,
+        descripcion: "Casa de arquitectura colonial restaurada en el centro histórico de Jericó, con patio central, balcones de madera y techos altos.",
+        caracteristicas: ["Patio central", "Balcones de madera", "Techos altos", "Cerca al parque"],
+        imagenes: ["1564013799919-ab600027ffc6", "1570129477492-45c003edd2be", "1600585154340-be6161a56a0c", "1568605114967-8130f3a36994", "1600607687939-ce8a6c25118c"]
     },
     {
-        id: 9, titulo: "Local comercial sobre vía principal", tipo: "local", operacion: "arriendo",
-        precio: 2800000, municipio: "Andes", direccion: "Carrera 50 # 52-10",
-        estado: "disponible", habitaciones: 0, banos: 1, area: 75,
-        descripcion: "Local esquinero de alto flujo peatonal, con vitrina amplia, baño y depósito.",
+        id: 9, titulo: "Local comercial esquinero", tipo: "local", operacion: "arriendo", precio: 2800000,
+        municipio: "Andes", sector: "urbano", direccion: "Carrera 50 # 49-02", estado: "disponible", nuevo: true,
+        habitaciones: 0, banos: 1, area: 70, parqueaderos: 0,
+        descripcion: "Local esquinero sobre la vía principal de Andes, con alto flujo peatonal, vitrina amplia, baño y depósito.",
         caracteristicas: ["Esquinero", "Vitrina", "Depósito", "Alto flujo peatonal"],
-        imagenes: ["photo-1580587771525-78b9dba3b914", "photo-1564013799919-ab600027ffc6", "photo-1522708323590-d24dbb6b0267"]
+        imagenes: ["1600607687939-ce8a6c25118c", "1522708323590-d24dbb6b0267", "1502672260266-1c1ef2d93688", "1600585154340-be6161a56a0c", "1564013799919-ab600027ffc6"]
     }
 ];
 
-const MUNICIPIOS = ["Andes", "Betania", "Ciudad Bolívar", "Hispania", "Jardín", "Jericó", "Támesis"];
+const MUNICIPIOS = ["Jardín", "Jericó", "Andes", "Ciudad Bolívar", "Hispania", "Fredonia", "Támesis"];
+
+// Favoritos de ejemplo de D06 (se cargan solo la primera vez)
+const FAVORITOS_INICIALES = [1, 2, 6, 7];
